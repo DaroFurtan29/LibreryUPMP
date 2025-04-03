@@ -67,11 +67,11 @@ public class Main extends javax.swing.JFrame {
         PanelMenu = new javax.swing.JPanel();
         BotonInicio = new javax.swing.JButton();
         BotonVisitas = new javax.swing.JButton();
-        labelLogo = new javax.swing.JLabel();
         BotonLibros = new javax.swing.JButton();
         BotonDevoluciones = new javax.swing.JButton();
         BotonPrestamo = new javax.swing.JButton();
         labelUPMP = new javax.swing.JLabel();
+        labelLogo1 = new javax.swing.JLabel();
         panelBanner = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -129,8 +129,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        labelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO 100X100px.png"))); // NOI18N
-
         BotonLibros.setBackground(new java.awt.Color(0, 0, 102));
         BotonLibros.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         BotonLibros.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,6 +179,8 @@ public class Main extends javax.swing.JFrame {
 
         labelUPMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LetrasUPMP6.png"))); // NOI18N
 
+        labelLogo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M - LA METRO 100 PX.png"))); // NOI18N
+
         javax.swing.GroupLayout PanelMenuLayout = new javax.swing.GroupLayout(PanelMenu);
         PanelMenu.setLayout(PanelMenuLayout);
         PanelMenuLayout.setHorizontalGroup(
@@ -192,21 +192,21 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(BotonDevoluciones, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(BotonLibros, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(PanelMenuLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(PanelMenuLayout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(labelLogo)
-                        .addGap(59, 59, 59))
-                    .addComponent(labelUPMP, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addContainerGap()
+                        .addComponent(labelUPMP))
+                    .addGroup(PanelMenuLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(labelLogo1)))
                 .addContainerGap())
         );
         PanelMenuLayout.setVerticalGroup(
             PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelMenuLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(labelLogo)
-                .addGap(27, 27, 27)
+                .addGap(43, 43, 43)
+                .addComponent(labelLogo1)
+                .addGap(26, 26, 26)
                 .addComponent(labelUPMP)
                 .addGap(29, 29, 29)
                 .addComponent(BotonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -435,7 +435,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel labelLogo;
+    private javax.swing.JLabel labelLogo1;
     private javax.swing.JLabel labelPixelHeart;
     private javax.swing.JLabel labelUPMP;
     private javax.swing.JPanel panelBanner;

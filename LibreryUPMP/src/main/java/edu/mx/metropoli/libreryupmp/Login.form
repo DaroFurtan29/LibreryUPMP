@@ -98,12 +98,12 @@
                 <Component class="javax.swing.JLabel" name="LabelLogo">
                   <Properties>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Images/LOGO 200X200px.png"/>
+                      <Image iconType="3" name="/LOGO-verde-300x64.png"/>
                     </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="60" y="150" width="-1" height="-1"/>
+                      <AbsoluteConstraints x="10" y="230" width="-1" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
