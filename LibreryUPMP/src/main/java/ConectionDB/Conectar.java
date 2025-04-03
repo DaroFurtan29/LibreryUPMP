@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class Conectar {
     String ip = "localhost";
     String usuario = "root";
-    String pwd = "upmp";
+    String pwd = "UPMP";
     String puerto = "3306";
     String db = "upmp";
     

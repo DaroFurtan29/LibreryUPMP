@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package edu.mx.metropoli.libreryupmp;
 
 import ConectionDB.Conectar;
@@ -12,7 +8,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.LayoutManager;
 import java.awt.RenderingHints;
-//import javax.swing.JButton;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
@@ -55,7 +51,7 @@ public class Login extends javax.swing.JFrame {
         jPanel1.setName(""); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(0, 0, 102));
+        jPanel2.setBackground(new java.awt.Color(255, 102, 0));
 
         jPanel3.setBackground(new java.awt.Color(0, 51, 204));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -67,7 +63,7 @@ public class Login extends javax.swing.JFrame {
         LabelBackground.setText("jLabel3");
         jPanel3.add(LabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, -1));
 
-        jPanel4.setBackground(new java.awt.Color(0, 0, 102));
+        jPanel4.setBackground(new java.awt.Color(255, 102, 0));
 
         txtUser.setForeground(new java.awt.Color(255, 102, 0));
         txtUser.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -202,23 +198,13 @@ public class Login extends javax.swing.JFrame {
     private void BottonGoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BottonGoActionPerformed
         Validacion cu = new Validacion();
         boolean codigo = cu.validarUsuario(txtUser, txtPassword);
-        
-        
+
         if(codigo == true)
         {
             this.dispose();
             Main jmain = new Main();
             jmain.setVisible(true);
         }
-        
-        /*
-        JButton myButton = new JButton("my button");
-        //Define 40 como Radio.
-        myButton.setBorder(new RoundedBorder(5));
-        Main jmain = new Main();
-        jmain.setVisible(true);
-        */
-       
     }//GEN-LAST:event_BottonGoActionPerformed
 
     private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
@@ -283,7 +269,9 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
-class RoundedPanel extends JPanel{
+
+    
+    class RoundedPanel extends JPanel{
         private Color backgroundColor;
         private int cornerRadius = 15;
         public RoundedPanel(LayoutManager layout, int radius) {

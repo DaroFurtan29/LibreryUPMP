@@ -41,26 +41,26 @@ public class Home extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(1070, 450));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Ebrima", 0, 12)); // NOI18N
-        jLabel4.setText("Heroica Puebla de Zaragoza Puebla72480");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 290, 230, 28));
+        jLabel4.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
+        jLabel4.setText("Heroica Puebla de Zaragoza Puebla 72480");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 260, 28));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Bienvenido1.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(57, 94, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Direccion.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 126, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, 126, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Telefono2.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 117, 40));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 230, 117, 40));
 
-        jLabel3.setFont(new java.awt.Font("Ebrima", 0, 12)); // NOI18N
-        jLabel3.setText("Calle Popocatépetl S/N, Colonia 3 Cerritos ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, 20));
+        jLabel3.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
+        jLabel3.setText("Calle Popocatépetl S/N, Colonia Tres Cerritos ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, 20));
 
-        jLabel7.setFont(new java.awt.Font("Ebrima", 0, 12)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
         jLabel7.setText("(01) 222 582 5222");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 97, 30));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 110, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Ilustracion1.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(436, 0, 651, 458));

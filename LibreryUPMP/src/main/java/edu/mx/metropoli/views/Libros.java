@@ -38,7 +38,7 @@ public class Libros extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Keep Calm Med", 0, 24)); // NOI18N
         jLabel1.setText("Consulta de Libros");
 
-        jLabel2.setText("Inserte ID del libro a cunsultar:");
+        jLabel2.setText("Inserte nombre del libro a consultar:");
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

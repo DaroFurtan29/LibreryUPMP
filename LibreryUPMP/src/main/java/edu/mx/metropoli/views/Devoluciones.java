@@ -40,7 +40,7 @@ public class Devoluciones extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Keep Calm Med", 0, 24)); // NOI18N
         jLabel2.setText("Devoluciones");
 
-        jLabel3.setText("Inserte ID del libro:");
+        jLabel3.setText("Inserte nombre del libro:");
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
