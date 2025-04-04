@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package edu.mx.metropoli.libreryupmp;
 
 import edu.mx.metropoli.views.*;
@@ -17,10 +14,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import javax.swing.JPanel;
 
-/**
- *
- * @author raul_
- */
+// @author #LaMetro
+
 public class Main extends javax.swing.JFrame {
 
     /**
@@ -88,7 +83,10 @@ public class Main extends javax.swing.JFrame {
         jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Librery #LaMetro");
         setBackground(new java.awt.Color(0, 0, 0));
+        setPreferredSize(new java.awt.Dimension(1340, 680));
+        setSize(new java.awt.Dimension(1040, 680));
 
         jPanel3.setBackground(new java.awt.Color(255, 102, 51));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -253,16 +251,22 @@ public class Main extends javax.swing.JFrame {
             .addGroup(panelBannerLayout.createSequentialGroup()
                 .addGap(140, 140, 140)
                 .addComponent(jLabel7)
-                .addGap(9, 9, 9)
-                .addComponent(jLabel1))
-            .addGroup(panelBannerLayout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jLabel4)
-                .addGap(14, 14, 14)
-                .addComponent(jLabel5))
-            .addGroup(panelBannerLayout.createSequentialGroup()
-                .addGap(470, 470, 470)
-                .addComponent(jLabel6))
+                .addGroup(panelBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBannerLayout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel1))
+                    .addGroup(panelBannerLayout.createSequentialGroup()
+                        .addGroup(panelBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelBannerLayout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBannerLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6)
+                                .addGap(290, 290, 290)))
+                        .addComponent(jLabel5)))
+                .addGap(148, 148, 148))
         );
         panelBannerLayout.setVerticalGroup(
             panelBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -270,13 +274,15 @@ public class Main extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(panelBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel1))
-                .addGap(4, 4, 4)
-                .addGroup(panelBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
-                .addGap(4, 4, 4)
-                .addComponent(jLabel6))
+                    .addGroup(panelBannerLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelBannerLayout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6))
+                            .addComponent(jLabel5)))))
         );
 
         jPanel3.add(panelBanner, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 1070, 140));
@@ -296,7 +302,7 @@ public class Main extends javax.swing.JFrame {
 
         dateText.setFont(new java.awt.Font("Keep Calm Med", 0, 24)); // NOI18N
         dateText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/calendar2.png"))); // NOI18N
-        dateText.setText("  Hoy es {dayname} {day} de {month} de {year}");
+        dateText.setText("  Hoy es {dayname} {day} de {month} del {year}");
         dateText.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout PanelDateLayout = new javax.swing.GroupLayout(PanelDate);
@@ -312,7 +318,7 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(96, 96, 96)
                 .addComponent(dateText)
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(259, Short.MAX_VALUE))
         );
         PanelDateLayout.setVerticalGroup(
             PanelDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,34 +357,33 @@ public class Main extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
         );
 
+        getAccessibleContext().setAccessibleName("Libreria #LaMetro");
+        getAccessibleContext().setAccessibleDescription("");
+
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonInicioActionPerformed
-        // TODO add your handling code here:
         ShowPanel(new Home());
     }//GEN-LAST:event_BotonInicioActionPerformed
 
     private void BotonLibrosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonLibrosActionPerformed
-        // TODO add your handling code here:
         ShowPanel(new Libros());
     }//GEN-LAST:event_BotonLibrosActionPerformed
 
     private void BotonPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPrestamoActionPerformed
-        // TODO add your handling code here:
         ShowPanel(new Prestamos());
     }//GEN-LAST:event_BotonPrestamoActionPerformed
 
     private void BotonDevolucionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDevolucionesActionPerformed
-        // TODO add your handling code here:
         ShowPanel(new Devoluciones());
     }//GEN-LAST:event_BotonDevolucionesActionPerformed
 
     private void BotonVisitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisitasActionPerformed
-        // TODO add your handling code here:
         ShowPanel(new Visits());
     }//GEN-LAST:event_BotonVisitasActionPerformed
 

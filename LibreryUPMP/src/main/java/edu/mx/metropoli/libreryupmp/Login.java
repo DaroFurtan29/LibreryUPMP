@@ -11,10 +11,8 @@ import java.awt.RenderingHints;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-/**
- *
- * @author raul_
- */
+//@author #LsMetro
+
 public class Login extends javax.swing.JFrame {
 
     public Login() {
@@ -46,6 +44,7 @@ public class Login extends javax.swing.JFrame {
         LabelUser = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Libreria #LaMetro");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Loggin", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
         jPanel1.setName(""); // NOI18N
@@ -61,9 +60,9 @@ public class Login extends javax.swing.JFrame {
 
         LabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Frame5.png"))); // NOI18N
         LabelBackground.setText("jLabel3");
-        jPanel3.add(LabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, -1));
+        jPanel3.add(LabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 500));
 
-        jPanel4.setBackground(new java.awt.Color(255, 102, 0));
+        jPanel4.setBackground(new java.awt.Color(255, 51, 0));
 
         txtUser.setForeground(new java.awt.Color(255, 102, 0));
         txtUser.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -130,7 +129,7 @@ public class Login extends javax.swing.JFrame {
                         .addComponent(LabelPassword)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel2)))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel6)
@@ -166,17 +165,17 @@ public class Login extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(30, 30, 30))
+                .addGap(40, 40, 40)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(35, 35, 35)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(30, 30, 30))
+                .addGap(35, 35, 35))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
@@ -192,7 +191,10 @@ public class Login extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        getAccessibleContext().setAccessibleDescription("Programa de Adminstracion de la Libreria de la Universidad Polítecnica Metropolitana de Puebla");
+
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BottonGoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BottonGoActionPerformed
