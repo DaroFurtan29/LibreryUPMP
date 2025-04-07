@@ -1,5 +1,7 @@
 package ConectionDB;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
@@ -22,7 +24,7 @@ public class Validacion {
             rs = ps.executeQuery();
             
             if(rs.next()){
-                JOptionPane.showMessageDialog(null, "Ingreso Exitoso a la BD");
+                JOptionPane.showMessageDialog(null, "Ingreso Exitoso al Administrador");
                 retorno = true;
             }
             else{

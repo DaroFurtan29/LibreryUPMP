@@ -11,13 +11,11 @@ import java.awt.RenderingHints;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-//@author #LsMetro
+//@author #LaMetro
 
 public class Login extends javax.swing.JFrame {
 
     public Login() {
-        
-        
         initComponents();
         Conectar onj = new Conectar();
         onj.conectarToDB();
@@ -28,41 +26,52 @@ public class Login extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
         LabelLogo = new javax.swing.JLabel();
         LabelBackground = new javax.swing.JLabel();
-        jPanel4 = new RoundedPanel(50, Color.WHITE);
+        jPanel4 = new RoundedPanel(50);
+        IMGLOCK = new javax.swing.JLabel();
+        WELCOMETEXT = new javax.swing.JLabel();
+        USUARIO = new javax.swing.JLabel();
         txtUser = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        CONTRA = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
         BottonGo = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        LabelPassword = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        LabelUser = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Libreria #LaMetro");
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Loggin", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 14))); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(225, 94, 41));
         jPanel1.setName(""); // NOI18N
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 102, 0));
-
-        jPanel3.setBackground(new java.awt.Color(0, 51, 204));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         LabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO-verde-300x64.png"))); // NOI18N
-        jPanel3.add(LabelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        jPanel1.add(LabelLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
 
         LabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Frame5.png"))); // NOI18N
         LabelBackground.setText("jLabel3");
-        jPanel3.add(LabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 500));
+        jPanel1.add(LabelBackground, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 320, 500));
 
-        jPanel4.setBackground(new java.awt.Color(255, 51, 0));
+        jPanel4.setBackground(new java.awt.Color(32, 59, 104));
+        jPanel4.setOpaque(false);
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        IMGLOCK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/House Lock1.png"))); // NOI18N
+        jPanel4.add(IMGLOCK, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, -1));
+
+        WELCOMETEXT.setBackground(new java.awt.Color(0, 0, 0));
+        WELCOMETEXT.setFont(new java.awt.Font("Gilroy", 1, 30)); // NOI18N
+        WELCOMETEXT.setForeground(new java.awt.Color(255, 255, 255));
+        WELCOMETEXT.setText("W E L C O M E");
+        jPanel4.add(WELCOMETEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 76, -1, -1));
+
+        USUARIO.setFont(new java.awt.Font("Gilroy", 0, 24)); // NOI18N
+        USUARIO.setForeground(new java.awt.Color(255, 255, 255));
+        USUARIO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/profile.png"))); // NOI18N
+        USUARIO.setText("User");
+        USUARIO.setToolTipText("");
+        jPanel4.add(USUARIO, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, -1, 20));
 
         txtUser.setForeground(new java.awt.Color(255, 102, 0));
         txtUser.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -71,125 +80,38 @@ public class Login extends javax.swing.JFrame {
                 txtUserActionPerformed(evt);
             }
         });
+        jPanel4.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 196, 202, 30));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/House Lock1.png"))); // NOI18N
-
-        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
-        jLabel8.setText("W E L C O M E");
+        CONTRA.setFont(new java.awt.Font("Gilroy", 0, 24)); // NOI18N
+        CONTRA.setForeground(new java.awt.Color(255, 255, 255));
+        CONTRA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/unlock 1.png"))); // NOI18N
+        CONTRA.setText("Password");
+        jPanel4.add(CONTRA, new org.netbeans.lib.awtextra.AbsoluteConstraints(101, 250, -1, -1));
 
         txtPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPasswordActionPerformed(evt);
             }
         });
+        jPanel4.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 285, 202, 30));
 
-        BottonGo.setBackground(new java.awt.Color(0, 0, 0));
-        BottonGo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        BottonGo.setBackground(new java.awt.Color(0, 32, 96));
+        BottonGo.setFont(new java.awt.Font("Gilroy", 1, 18)); // NOI18N
         BottonGo.setForeground(new java.awt.Color(255, 255, 255));
         BottonGo.setText("Go");
         BottonGo.setToolTipText("");
+        BottonGo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        BottonGo.setBorderPainted(false);
         BottonGo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BottonGoActionPerformed(evt);
             }
         });
+        jPanel4.add(BottonGo, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 350, 202, 30));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setText("Password");
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 340, 400));
 
-        LabelPassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/unlock 1.png"))); // NOI18N
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setText("User");
-        jLabel1.setToolTipText("");
-
-        LabelUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/profile.png"))); // NOI18N
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(109, 109, 109)
-                        .addComponent(LabelUser)
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8)
-                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BottonGo, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(LabelPassword)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2)))
-                .addContainerGap(77, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(130, 130, 130))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(46, 46, 46)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(LabelUser)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(LabelPassword))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(BottonGo, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(35, 35, 35))
-        );
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
 
         getAccessibleContext().setAccessibleDescription("Programa de Adminstracion de la Libreria de la Universidad Polítecnica Metropolitana de Puebla");
 
@@ -248,6 +170,7 @@ public class Login extends javax.swing.JFrame {
 
     
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Login().setVisible(true);
             }
@@ -256,23 +179,24 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BottonGo;
+    private javax.swing.JLabel CONTRA;
+    private javax.swing.JLabel IMGLOCK;
     private javax.swing.JLabel LabelBackground;
     private javax.swing.JLabel LabelLogo;
-    private javax.swing.JLabel LabelPassword;
-    private javax.swing.JLabel LabelUser;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel USUARIO;
+    private javax.swing.JLabel WELCOMETEXT;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
 
     
+    
+    
+
+
+
     class RoundedPanel extends JPanel{
         private Color backgroundColor;
         private int cornerRadius = 15;
