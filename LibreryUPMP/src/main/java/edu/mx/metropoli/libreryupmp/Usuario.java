@@ -30,7 +30,7 @@ public class Usuario extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(225, 94, 41));
+        jPanel1.setBackground(new java.awt.Color(225, 94, 42));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(32, 59, 104));

@@ -59,7 +59,6 @@ public class Main extends javax.swing.JFrame {
         BotonInicio = new javax.swing.JButton();
         BotonVisitas = new javax.swing.JButton();
         BotonLibros = new javax.swing.JButton();
-        BotonDevoluciones = new javax.swing.JButton();
         BotonPrestamo = new javax.swing.JButton();
         labelUPMP = new javax.swing.JLabel();
         labelLogo1 = new javax.swing.JLabel();
@@ -141,21 +140,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
-        BotonDevoluciones.setBackground(new java.awt.Color(32, 59, 104));
-        BotonDevoluciones.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
-        BotonDevoluciones.setForeground(new java.awt.Color(255, 255, 255));
-        BotonDevoluciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/sync.png"))); // NOI18N
-        BotonDevoluciones.setText(" Devoluciones");
-        BotonDevoluciones.setBorderPainted(false);
-        BotonDevoluciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonDevoluciones.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        BotonDevoluciones.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        BotonDevoluciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonDevolucionesActionPerformed(evt);
-            }
-        });
-
         BotonPrestamo.setBackground(new java.awt.Color(32, 59, 104));
         BotonPrestamo.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
         BotonPrestamo.setForeground(new java.awt.Color(255, 255, 255));
@@ -196,7 +180,6 @@ public class Main extends javax.swing.JFrame {
                             .addComponent(BotonInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BotonVisitas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BotonPrestamo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BotonDevoluciones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(BotonLibros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
         );
@@ -209,13 +192,11 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(labelUPMP)
                 .addGap(29, 29, 29)
                 .addComponent(BotonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BotonVisitas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BotonPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(BotonDevoluciones, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(BotonLibros, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -326,12 +307,8 @@ public class Main extends javax.swing.JFrame {
         ShowPanel(new Prestamos());
     }//GEN-LAST:event_BotonPrestamoActionPerformed
 
-    private void BotonDevolucionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDevolucionesActionPerformed
-        ShowPanel(new Devoluciones());
-    }//GEN-LAST:event_BotonDevolucionesActionPerformed
-
     private void BotonVisitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisitasActionPerformed
-        ShowPanel(new Visits());
+        ShowPanel(new Visitas());
     }//GEN-LAST:event_BotonVisitasActionPerformed
 
     /**
@@ -370,7 +347,6 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonDevoluciones;
     private javax.swing.JButton BotonInicio;
     private javax.swing.JButton BotonLibros;
     private javax.swing.JButton BotonPrestamo;

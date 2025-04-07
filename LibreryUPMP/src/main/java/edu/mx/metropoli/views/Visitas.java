@@ -8,12 +8,12 @@ package edu.mx.metropoli.views;
  *
  * @author pauli
  */
-public class Visits extends javax.swing.JPanel {
+public class Visitas extends javax.swing.JPanel {
 
     /**
      * Creates new form Visits
      */
-    public Visits() {
+    public Visitas() {
         initComponents();
     }
 
@@ -101,17 +101,14 @@ public class Visits extends javax.swing.JPanel {
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 90, 180, 80));
 
         jLabel3.setFont(new java.awt.Font("Gilroy", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Total de Visitas");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 50, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Gilroy", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("ACTUALIZAR");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Gilroy", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Visitas");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, -1, -1));
 
