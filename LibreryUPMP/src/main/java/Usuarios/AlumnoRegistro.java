@@ -1,6 +1,8 @@
 
 package Usuarios;
 
+import edu.mx.metropoli.libreryupmp.Usuario;
+
 /**
  *
  * @author #LaMetro
@@ -48,7 +50,7 @@ public class AlumnoRegistro extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("REGISTROS");
+        jLabel1.setText("REGISTRO ALUMNOS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 740, 30));
 
         LOGO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M c-letra LAMETRO.png"))); // NOI18N
@@ -150,7 +152,9 @@ public class AlumnoRegistro extends javax.swing.JFrame {
     private void REGRESARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGRESARActionPerformed
         // REGRESAR A LA PANTALLA ANTERIOR - POR CUALQUIER CAUSA 
         
-        
+        this.dispose();
+            Usuario usuario = new Usuario();
+            usuario.setVisible(true);
         
     }//GEN-LAST:event_REGRESARActionPerformed
 
