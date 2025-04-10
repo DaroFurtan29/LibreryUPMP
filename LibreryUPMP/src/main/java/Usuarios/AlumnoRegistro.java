@@ -2,6 +2,8 @@
 package Usuarios;
 
 import edu.mx.metropoli.libreryupmp.Usuario;
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
 
 /**
  *
@@ -13,8 +15,19 @@ public class AlumnoRegistro extends javax.swing.JFrame {
     public AlumnoRegistro() {
         initComponents();
     }
-
-
+    
+    // 
+       private void ShowPanel(JPanel p) {
+        p.setSize(980, 530);
+        p.setLocation(0, 0);
+        
+        ventana.removeAll();
+        ventana.add(p, BorderLayout.CENTER);
+        ventana.revalidate();
+        ventana.repaint();
+       
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -27,7 +40,7 @@ public class AlumnoRegistro extends javax.swing.JFrame {
         REGISTRAR_NUEVO = new javax.swing.JToggleButton();
         PRESTAMO_REG1 = new javax.swing.JToggleButton();
         USO_COMPUTADORA = new javax.swing.JToggleButton();
-        jPanel4 = new javax.swing.JPanel();
+        ventana = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Registro de Alumnos");
@@ -101,18 +114,21 @@ public class AlumnoRegistro extends javax.swing.JFrame {
         });
         jPanel1.add(USO_COMPUTADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 175, 75));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        ventana.setMaximumSize(new java.awt.Dimension(980, 530));
+        ventana.setMinimumSize(new java.awt.Dimension(980, 530));
+
+        javax.swing.GroupLayout ventanaLayout = new javax.swing.GroupLayout(ventana);
+        ventana.setLayout(ventanaLayout);
+        ventanaLayout.setHorizontalGroup(
+            ventanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 980, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        ventanaLayout.setVerticalGroup(
+            ventanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 530, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 980, 530));
+        jPanel1.add(ventana, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 980, 530));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 700));
 
@@ -124,28 +140,28 @@ public class AlumnoRegistro extends javax.swing.JFrame {
     private void VISITAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VISITAActionPerformed
         // PONER FORMULARIO DE VISITA
         
-        
+        ShowPanel(new Visitas_Alumno());
         
     }//GEN-LAST:event_VISITAActionPerformed
 
     private void PRESTAMO_REG1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PRESTAMO_REG1ActionPerformed
         // PONER FORMULARIO DE PRESTAMO
         
-        
+        ShowPanel(new Prestamo_Alumno());
         
     }//GEN-LAST:event_PRESTAMO_REG1ActionPerformed
 
     private void USO_COMPUTADORAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USO_COMPUTADORAActionPerformed
         // PONER USO DE LA COMPUTADORA
         
-        
+        ShowPanel(new Computadora_Alumno());
         
     }//GEN-LAST:event_USO_COMPUTADORAActionPerformed
 
     private void REGISTRAR_NUEVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGISTRAR_NUEVOActionPerformed
         // FORMULARIO SI EL ALUMNO ES NUEVO
         
-        
+        ShowPanel(new Registro_Alumno());
         
     }//GEN-LAST:event_REGISTRAR_NUEVOActionPerformed
 
@@ -205,6 +221,6 @@ public class AlumnoRegistro extends javax.swing.JFrame {
     private javax.swing.JToggleButton VISITA;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel ventana;
     // End of variables declaration//GEN-END:variables
 }

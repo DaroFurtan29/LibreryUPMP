@@ -16,7 +16,7 @@ public class MaestroRegistro extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
+        ventana = new javax.swing.JPanel();
         VISITA = new javax.swing.JToggleButton();
         PRESTAMO_REG1 = new javax.swing.JToggleButton();
         USO_COMPUTADORA = new javax.swing.JToggleButton();
@@ -32,18 +32,18 @@ public class MaestroRegistro extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(32, 59, 104));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout ventanaLayout = new javax.swing.GroupLayout(ventana);
+        ventana.setLayout(ventanaLayout);
+        ventanaLayout.setHorizontalGroup(
+            ventanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 980, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        ventanaLayout.setVerticalGroup(
+            ventanaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 530, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 980, 530));
+        jPanel1.add(ventana, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 980, 530));
 
         VISITA.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
         VISITA.setText("VISITA");
@@ -178,6 +178,6 @@ public class MaestroRegistro extends javax.swing.JFrame {
     private javax.swing.JToggleButton VISITA;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel ventana;
     // End of variables declaration//GEN-END:variables
 }
