@@ -1,13 +1,15 @@
 
 package edu.mx.metropoli.views;
 
+import Usuarios.*;
+import edu.mx.metropoli.libreryupmp.Main;
 import ConectionDB.Conectar;
-import edu.mx.metropoli.libreryupmp.Usuario;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -93,11 +95,12 @@ public class Visitas extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Error");
         }
 }
-
+        
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        GRUPO_REGISTRO = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         TEXT_TOTAL = new javax.swing.JLabel();
         TEXT_VISITA = new javax.swing.JLabel();
@@ -107,6 +110,8 @@ public class Visitas extends javax.swing.JPanel {
         TOTAL_VISITAS = new javax.swing.JTable();
         REGISTRAR = new javax.swing.JButton();
         ACTUALIZAR = new javax.swing.JButton();
+        boton_alumno = new javax.swing.JRadioButton();
+        boton_docente = new javax.swing.JRadioButton();
 
         setMaximumSize(new java.awt.Dimension(1070, 450));
         setMinimumSize(new java.awt.Dimension(1070, 450));
@@ -158,7 +163,7 @@ public class Visitas extends javax.swing.JPanel {
                 REGISTRARActionPerformed(evt);
             }
         });
-        jPanel1.add(REGISTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, -1, -1));
+        jPanel1.add(REGISTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 160, -1));
 
         ACTUALIZAR.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
         ACTUALIZAR.setText("ACTUALIZAR");
@@ -167,7 +172,17 @@ public class Visitas extends javax.swing.JPanel {
                 ACTUALIZARActionPerformed(evt);
             }
         });
-        jPanel1.add(ACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
+        jPanel1.add(ACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 160, -1));
+
+        GRUPO_REGISTRO.add(boton_alumno);
+        boton_alumno.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        boton_alumno.setText("Alumno");
+        jPanel1.add(boton_alumno, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+
+        GRUPO_REGISTRO.add(boton_docente);
+        boton_docente.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        boton_docente.setText("Docente");
+        jPanel1.add(boton_docente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -185,6 +200,17 @@ public class Visitas extends javax.swing.JPanel {
         // REGISTRAR VISITAS
         
         
+        if(boton_alumno.isSelected()){
+            AlumnoRegistro alumno = new AlumnoRegistro();
+            alumno.setVisible(true);
+        } else {
+            Main cerrar = new Main();
+            cerrar.dispose();
+            MaestroRegistro maestro = new MaestroRegistro();
+            maestro.setVisible(true);
+        }
+        
+        
     }//GEN-LAST:event_REGISTRARActionPerformed
 
     private void ACTUALIZARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ACTUALIZARActionPerformed
@@ -195,11 +221,14 @@ public class Visitas extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ACTUALIZAR;
+    private javax.swing.ButtonGroup GRUPO_REGISTRO;
     private javax.swing.JButton REGISTRAR;
     private javax.swing.JLabel TEXT_TOTAL;
     private javax.swing.JLabel TEXT_VISITA;
     private javax.swing.JTable TOTAL_VISITAS;
     private javax.swing.JTable VISITA;
+    private javax.swing.JRadioButton boton_alumno;
+    private javax.swing.JRadioButton boton_docente;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package Usuarios;
 
-/**
- *
- * @author dell
- */
+// @author dell
+
 public class Registro_Alumno extends javax.swing.JPanel {
 
     /**
@@ -49,56 +44,50 @@ public class Registro_Alumno extends javax.swing.JPanel {
         jPanel1.setMinimumSize(new java.awt.Dimension(980, 530));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Registrate si vienes por primera vez a la Biblioteca de #LaMetro ");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 980, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
 
-        GENERO_TEXT.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        GENERO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
+        GENERO_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         GENERO_TEXT.setText("Genero");
-        jPanel1.add(GENERO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, -1));
+        jPanel1.add(GENERO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, 30));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("REGISTRO NUEVO");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Gotham", 0, 36)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setText("REGISTRO DE ALUMNO");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
-        NOMBRE_TEXT.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        NOMBRE_TEXT.setForeground(new java.awt.Color(0, 0, 0));
+        NOMBRE_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         NOMBRE_TEXT.setText("Nombre");
-        jPanel1.add(NOMBRE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, -1));
+        jPanel1.add(NOMBRE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, 30));
 
-        CARRERA_TEXT.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        CARRERA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
+        CARRERA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         CARRERA_TEXT.setText("Carrera");
-        jPanel1.add(CARRERA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, -1));
+        jPanel1.add(CARRERA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, 30));
 
-        CORREO_TEXT.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        CORREO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
-        CORREO_TEXT.setText("Correo Institucional");
-        jPanel1.add(CORREO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
+        CORREO_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        CORREO_TEXT.setText("<html>Correo <p>Institucional<hmtl>");
+        jPanel1.add(CORREO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 325, -1, 60));
 
-        MATRICULA_TEXT.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        MATRICULA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
+        MATRICULA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         MATRICULA_TEXT.setText("Matricula");
-        jPanel1.add(MATRICULA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+        jPanel1.add(MATRICULA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, 30));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextField1.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 320, -1));
 
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 320, -1));
 
-        jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextField3.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 320, -1));
 
-        jTextField4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jTextField4.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 320, -1));
 
-        jTextField5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 320, -1));
+        jTextField5.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 320, 30));
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jButton1.setText("REGISTRARME");

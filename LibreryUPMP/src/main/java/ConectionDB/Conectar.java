@@ -20,9 +20,9 @@ public class Conectar {
             Class.forName("com.mysql.jdbc.Driver");
             conectar = DriverManager.getConnection(query,usuario,pwd2);
             // conectar = DriverManager.getConnection(query,usuario,pwd2);
-            JOptionPane.showMessageDialog(null,"Conectado a la DB","Conexion DB", 1);
+//            JOptionPane.showMessageDialog(null,"Conectado a la DB","Conexion DB", 1);
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null,"Fallo la Conexion","Conexion DB", 1);
+//            JOptionPane.showMessageDialog(null,"Fallo la Conexion","Conexion DB", 1);
 
         }        
         return conectar;

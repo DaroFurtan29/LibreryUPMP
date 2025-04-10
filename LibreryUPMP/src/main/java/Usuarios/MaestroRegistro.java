@@ -1,6 +1,10 @@
 
 package Usuarios;
 
+import edu.mx.metropoli.libreryupmp.Usuario;
+import java.awt.BorderLayout;
+import javax.swing.JPanel;
+
 /**
  *
  * @author dell
@@ -11,26 +15,99 @@ public class MaestroRegistro extends javax.swing.JFrame {
         initComponents();
     }
 
+    private void ShowPanel(JPanel p) {
+        p.setSize(980, 530);
+        p.setLocation(0, 0);
+        
+        ventana.removeAll();
+        ventana.add(p, BorderLayout.CENTER);
+        ventana.revalidate();
+        ventana.repaint();
+    }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        ventana = new javax.swing.JPanel();
-        VISITA = new javax.swing.JToggleButton();
-        PRESTAMO_REG1 = new javax.swing.JToggleButton();
-        USO_COMPUTADORA = new javax.swing.JToggleButton();
-        REGISTRAR_NUEVO = new javax.swing.JToggleButton();
-        REGRESAR = new javax.swing.JToggleButton();
         LOGO = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        TITULO_TEXT = new javax.swing.JLabel();
+        VISITA = new javax.swing.JButton();
+        PRESTAMO = new javax.swing.JButton();
+        COMPUTADORA = new javax.swing.JButton();
+        REGISTRATE = new javax.swing.JButton();
+        ventana = new javax.swing.JPanel();
+        REGRESAR = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro de Docentes/Adminstrativos");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(32, 59, 104));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        LOGO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M c-letra LAMETRO.png"))); // NOI18N
+        jPanel1.add(LOGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+
+        TITULO_TEXT.setBackground(new java.awt.Color(255, 255, 255));
+        TITULO_TEXT.setFont(new java.awt.Font("Gotham", 1, 20)); // NOI18N
+        TITULO_TEXT.setForeground(new java.awt.Color(255, 255, 255));
+        TITULO_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TITULO_TEXT.setText("<html><center>BIENVENIDO DOCENTE / ADMINISTRATIVO AL<p>PROGRAMA DE ADMINISTRACION BIBLIOTECARIA #LaMetro<html>");
+        jPanel1.add(TITULO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 980, 90));
+
+        VISITA.setBackground(new java.awt.Color(225, 94, 41));
+        VISITA.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
+        VISITA.setForeground(new java.awt.Color(255, 255, 255));
+        VISITA.setText("VISITA");
+        VISITA.setBorderPainted(false);
+        VISITA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        VISITA.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        VISITA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VISITAActionPerformed(evt);
+            }
+        });
+        jPanel1.add(VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 175, 75));
+
+        PRESTAMO.setBackground(new java.awt.Color(225, 94, 41));
+        PRESTAMO.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
+        PRESTAMO.setForeground(new java.awt.Color(255, 255, 255));
+        PRESTAMO.setText("PRESTAMO");
+        PRESTAMO.setBorderPainted(false);
+        PRESTAMO.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        PRESTAMO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PRESTAMOActionPerformed(evt);
+            }
+        });
+        jPanel1.add(PRESTAMO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 175, 75));
+
+        COMPUTADORA.setBackground(new java.awt.Color(225, 94, 41));
+        COMPUTADORA.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
+        COMPUTADORA.setForeground(new java.awt.Color(255, 255, 255));
+        COMPUTADORA.setText("<html><center>USOO DE COMPUTADORA<html>");
+        COMPUTADORA.setBorderPainted(false);
+        COMPUTADORA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        COMPUTADORA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                COMPUTADORAActionPerformed(evt);
+            }
+        });
+        jPanel1.add(COMPUTADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 175, 75));
+
+        REGISTRATE.setBackground(new java.awt.Color(225, 94, 41));
+        REGISTRATE.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
+        REGISTRATE.setForeground(new java.awt.Color(255, 255, 255));
+        REGISTRATE.setText("REGISTRATE");
+        REGISTRATE.setBorderPainted(false);
+        REGISTRATE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        REGISTRATE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                REGISTRATEActionPerformed(evt);
+            }
+        });
+        jPanel1.add(REGISTRATE, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 175, 75));
 
         javax.swing.GroupLayout ventanaLayout = new javax.swing.GroupLayout(ventana);
         ventana.setLayout(ventanaLayout);
@@ -45,60 +122,17 @@ public class MaestroRegistro extends javax.swing.JFrame {
 
         jPanel1.add(ventana, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 980, 530));
 
-        VISITA.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
-        VISITA.setText("VISITA");
-        VISITA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VISITAActionPerformed(evt);
-            }
-        });
-        jPanel1.add(VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 175, 75));
-
-        PRESTAMO_REG1.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
-        PRESTAMO_REG1.setText("PRESTAMO");
-        PRESTAMO_REG1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PRESTAMO_REG1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(PRESTAMO_REG1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 220, 175, 75));
-
-        USO_COMPUTADORA.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
-        USO_COMPUTADORA.setText("<html><center>USOO DE COMPUTADORA<html>");
-        USO_COMPUTADORA.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                USO_COMPUTADORAActionPerformed(evt);
-            }
-        });
-        jPanel1.add(USO_COMPUTADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 175, 75));
-
-        REGISTRAR_NUEVO.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
-        REGISTRAR_NUEVO.setText("REGISTRATE");
-        REGISTRAR_NUEVO.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                REGISTRAR_NUEVOActionPerformed(evt);
-            }
-        });
-        jPanel1.add(REGISTRAR_NUEVO, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 175, 75));
-
+        REGRESAR.setBackground(new java.awt.Color(0, 35, 96));
         REGRESAR.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        REGRESAR.setForeground(new java.awt.Color(255, 255, 255));
         REGRESAR.setText("REGRESAR");
+        REGRESAR.setBorderPainted(false);
         REGRESAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 REGRESARActionPerformed(evt);
             }
         });
-        jPanel1.add(REGRESAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 560, 150, 60));
-
-        LOGO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M c-letra LAMETRO.png"))); // NOI18N
-        jPanel1.add(LOGO, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
-
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("REGISTRO DOCENTES");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 30, 740, 30));
+        jPanel1.add(REGRESAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 555, 150, 60));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 650));
 
@@ -109,27 +143,39 @@ public class MaestroRegistro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void VISITAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VISITAActionPerformed
-        // PONER FORMULARIO DE VISITA
+        // ver formulario de visitas
+
+        ShowPanel(new Visitas_Alumno());
 
     }//GEN-LAST:event_VISITAActionPerformed
 
-    private void PRESTAMO_REG1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PRESTAMO_REG1ActionPerformed
-        // PONER FORMULARIO DE PRESTAMO
+    private void PRESTAMOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PRESTAMOActionPerformed
+        // Ver formulario de prestamo de libros
 
-    }//GEN-LAST:event_PRESTAMO_REG1ActionPerformed
+        ShowPanel(new Prestamo_Alumno());
 
-    private void USO_COMPUTADORAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_USO_COMPUTADORAActionPerformed
-        // PONER USO DE LA COMPUTADORA
+    }//GEN-LAST:event_PRESTAMOActionPerformed
 
-    }//GEN-LAST:event_USO_COMPUTADORAActionPerformed
+    private void COMPUTADORAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_COMPUTADORAActionPerformed
+        // Ver formulario de uso de la computadoras
 
-    private void REGISTRAR_NUEVOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGISTRAR_NUEVOActionPerformed
-        // FORMULARIO SI EL ALUMNO ES NUEVO
+        ShowPanel(new Computadora_Alumno());
 
-    }//GEN-LAST:event_REGISTRAR_NUEVOActionPerformed
+    }//GEN-LAST:event_COMPUTADORAActionPerformed
+
+    private void REGISTRATEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGISTRATEActionPerformed
+        // formulario de registro
+
+        ShowPanel(new Registro_Alumno());
+
+    }//GEN-LAST:event_REGISTRATEActionPerformed
 
     private void REGRESARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGRESARActionPerformed
-        // REGRESAR A LA PANTALLA ANTERIOR - POR CUALQUIER CAUSA
+        // regresar a la pantalla anterior
+
+        this.dispose();
+        Usuario usuario = new Usuario();
+        usuario.setVisible(true);
 
     }//GEN-LAST:event_REGRESARActionPerformed
 
@@ -170,13 +216,13 @@ public class MaestroRegistro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton COMPUTADORA;
     private javax.swing.JLabel LOGO;
-    private javax.swing.JToggleButton PRESTAMO_REG1;
-    private javax.swing.JToggleButton REGISTRAR_NUEVO;
-    private javax.swing.JToggleButton REGRESAR;
-    private javax.swing.JToggleButton USO_COMPUTADORA;
-    private javax.swing.JToggleButton VISITA;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton PRESTAMO;
+    private javax.swing.JButton REGISTRATE;
+    private javax.swing.JButton REGRESAR;
+    private javax.swing.JLabel TITULO_TEXT;
+    private javax.swing.JButton VISITA;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel ventana;
     // End of variables declaration//GEN-END:variables

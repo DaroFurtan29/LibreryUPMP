@@ -65,6 +65,8 @@ public class Prestamos extends javax.swing.JPanel {
         }
 }
 
+    public void buscar(String tabla){}
+    
     public void actualizar(){}
     
     @SuppressWarnings("unchecked")

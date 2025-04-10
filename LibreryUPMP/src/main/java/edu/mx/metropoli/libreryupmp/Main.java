@@ -60,8 +60,8 @@ public class Main extends javax.swing.JFrame {
         BotonVisitas = new javax.swing.JButton();
         BotonLibros = new javax.swing.JButton();
         BotonPrestamo = new javax.swing.JButton();
-        labelUPMP = new javax.swing.JLabel();
         labelLogo1 = new javax.swing.JLabel();
+        Text_LaMetro = new javax.swing.JLabel();
         panelBanner = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -77,7 +77,7 @@ public class Main extends javax.swing.JFrame {
 
         jMenu1.setText("jMenu1");
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Librery #LaMetro");
         setBackground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(1350, 700));
@@ -85,13 +85,14 @@ public class Main extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(1350, 700));
         setSize(new java.awt.Dimension(1350, 700));
 
-        jPanel3.setBackground(new java.awt.Color(225, 94, 41));
+        jPanel3.setBackground(new java.awt.Color(0, 32, 96));
         jPanel3.setMaximumSize(new java.awt.Dimension(1340, 680));
         jPanel3.setMinimumSize(new java.awt.Dimension(1340, 680));
         jPanel3.setPreferredSize(new java.awt.Dimension(1340, 680));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanelMenu.setBackground(new java.awt.Color(0, 32, 96));
+        PanelMenu.setBackground(new java.awt.Color(225, 94, 41));
+        PanelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BotonInicio.setBackground(new java.awt.Color(32, 59, 104));
         BotonInicio.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -109,6 +110,7 @@ public class Main extends javax.swing.JFrame {
                 BotonInicioActionPerformed(evt);
             }
         });
+        PanelMenu.add(BotonInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 283, 218, 60));
 
         BotonVisitas.setBackground(new java.awt.Color(32, 59, 104));
         BotonVisitas.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -124,6 +126,7 @@ public class Main extends javax.swing.JFrame {
                 BotonVisitasActionPerformed(evt);
             }
         });
+        PanelMenu.add(BotonVisitas, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 349, 218, 60));
 
         BotonLibros.setBackground(new java.awt.Color(32, 59, 104));
         BotonLibros.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -139,6 +142,7 @@ public class Main extends javax.swing.JFrame {
                 BotonLibrosActionPerformed(evt);
             }
         });
+        PanelMenu.add(BotonLibros, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 481, 218, 60));
 
         BotonPrestamo.setBackground(new java.awt.Color(32, 59, 104));
         BotonPrestamo.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -154,56 +158,19 @@ public class Main extends javax.swing.JFrame {
                 BotonPrestamoActionPerformed(evt);
             }
         });
+        PanelMenu.add(BotonPrestamo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 415, 218, 60));
 
-        labelUPMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LetrasUPMP6.png"))); // NOI18N
+        labelLogo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M LA METRO.png"))); // NOI18N
+        PanelMenu.add(labelLogo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 150, 100));
 
-        labelLogo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M c-letra LAMETRO.png"))); // NOI18N
-
-        javax.swing.GroupLayout PanelMenuLayout = new javax.swing.GroupLayout(PanelMenu);
-        PanelMenu.setLayout(PanelMenuLayout);
-        PanelMenuLayout.setHorizontalGroup(
-            PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenuLayout.createSequentialGroup()
-                .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PanelMenuLayout.createSequentialGroup()
-                        .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(PanelMenuLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(labelUPMP))
-                            .addGroup(PanelMenuLayout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(labelLogo1)))
-                        .addGap(0, 2, Short.MAX_VALUE))
-                    .addGroup(PanelMenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BotonInicio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BotonVisitas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BotonPrestamo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(BotonLibros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap())
-        );
-        PanelMenuLayout.setVerticalGroup(
-            PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelMenuLayout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addComponent(labelLogo1)
-                .addGap(31, 31, 31)
-                .addComponent(labelUPMP)
-                .addGap(29, 29, 29)
-                .addComponent(BotonInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonVisitas, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(BotonLibros, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        Text_LaMetro.setFont(new java.awt.Font("Gotham Black", 0, 45)); // NOI18N
+        Text_LaMetro.setForeground(new java.awt.Color(255, 255, 255));
+        Text_LaMetro.setText("#LaMetro");
+        PanelMenu.add(Text_LaMetro, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 160, -1, -1));
 
         jPanel3.add(PanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 230, 650));
 
-        panelBanner.setBackground(new java.awt.Color(0, 32, 96));
+        panelBanner.setBackground(new java.awt.Color(225, 94, 41));
         panelBanner.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -235,19 +202,20 @@ public class Main extends javax.swing.JFrame {
         jPanel3.add(panelBanner, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 80, 1070, 120));
         panelBanner.getAccessibleContext().setAccessibleName("");
 
-        PanelDate.setBackground(new java.awt.Color(0, 32, 96));
+        PanelDate.setBackground(new java.awt.Color(225, 94, 41));
         PanelDate.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(225, 94, 41));
+        jLabel2.setForeground(new java.awt.Color(0, 32, 96));
         jLabel2.setText("We");
         PanelDate.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, 30));
 
+        labelPixelHeart.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelPixelHeart.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/pixel3.png"))); // NOI18N
-        PanelDate.add(labelPixelHeart, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));
+        PanelDate.add(labelPixelHeart, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 40, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 24)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(225, 94, 41));
+        jLabel3.setForeground(new java.awt.Color(0, 32, 96));
         jLabel3.setText("read");
         PanelDate.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, -1, -1));
 
@@ -353,6 +321,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton BotonVisitas;
     private javax.swing.JPanel PanelDate;
     private javax.swing.JPanel PanelMenu;
+    private javax.swing.JLabel Text_LaMetro;
     private javax.swing.JPanel content;
     private javax.swing.JLabel dateText;
     private javax.swing.JLabel jLabel1;
@@ -366,7 +335,6 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelLogo1;
     private javax.swing.JLabel labelPixelHeart;
-    private javax.swing.JLabel labelUPMP;
     private javax.swing.JPanel panelBanner;
     // End of variables declaration//GEN-END:variables
       
