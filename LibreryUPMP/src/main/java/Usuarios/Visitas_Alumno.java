@@ -1,19 +1,17 @@
 
 package Usuarios;
 
-import ConectionDB.Conectar;
-import ConectionDB.Validacion;
-import javax.swing.JOptionPane;
-
-
 // @author #LaMetro 
+
+import ConectionDB.Conectar;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
 
 public class Visitas_Alumno extends javax.swing.JPanel {
 
     public Visitas_Alumno() {
         initComponents();
-        Conectar onj = new Conectar();
-        onj.conectarToDB();
     }
 
     @SuppressWarnings("unchecked")
@@ -21,10 +19,10 @@ public class Visitas_Alumno extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        matricula_text = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        INSERTAR_MATRICULA = new javax.swing.JTextField();
+        MATRICULA = new javax.swing.JTextField();
         RegistrarVisita = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(980, 530));
@@ -35,26 +33,26 @@ public class Visitas_Alumno extends javax.swing.JPanel {
         jPanel1.setMinimumSize(new java.awt.Dimension(980, 530));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
-        jLabel1.setText("MATRICULA");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, 40));
+        matricula_text.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
+        matricula_text.setText("MATRICULA");
+        jPanel1.add(matricula_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, 40));
 
         jLabel2.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Para llevar un control de las vistas de la Biblioteca, solo debes de teclar tu Matricula ");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 980, 60));
+        jLabel2.setText("<html><center>Estimado Alumno, para llevar un control de las vistas de la Biblioteca<p>solo debes teclar tu Matricula Institucional<html>");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, 60));
 
-        jLabel3.setFont(new java.awt.Font("Gotham", 0, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("REGISTRA TU VISITA");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
-        INSERTAR_MATRICULA.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
-        INSERTAR_MATRICULA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(INSERTAR_MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 360, 40));
+        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
+        MATRICULA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 360, 40));
 
         RegistrarVisita.setBackground(new java.awt.Color(0, 32, 96));
-        RegistrarVisita.setFont(new java.awt.Font("Gotham", 0, 36)); // NOI18N
+        RegistrarVisita.setFont(new java.awt.Font("Gilroy", 0, 36)); // NOI18N
         RegistrarVisita.setForeground(new java.awt.Color(255, 255, 255));
         RegistrarVisita.setText("REGISTRAR VISITA");
         RegistrarVisita.setBorderPainted(false);
@@ -79,21 +77,40 @@ public class Visitas_Alumno extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistrarVisitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVisitaActionPerformed
-        // TODO add your handling code here:
-        Validacion cu = new Validacion();
-//        boolean codigo = cu.RegistroVisitas;
+        // REGISTRAR VISITAS
+            Conectar con = new Conectar();
+            Connection conexion = con.conectarToDB();
+            String m ="";
+            String query = "";
+            
+            m=MATRICULA.getText();
+            
+            query = "INSERT INTO visita (IDalumno,FechaVisita) VALUES (?,now());";
+            // INSERT INTO visita (IDalumno,FechaVisita) VALUES (2022120077,now());
+            
+        try{
+            PreparedStatement pst = conexion.prepareStatement(query);
+            
+            pst.setString(1, m);
+            int n=pst.executeUpdate();
+            if(n>0){
+                JOptionPane.showMessageDialog(null, "REGISTRO EXITOSO");
+            }
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "ERROR DE REGISTRO");
+        }
         
-//        if(codigo == true)
         
     }//GEN-LAST:event_RegistrarVisitaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField INSERTAR_MATRICULA;
+    private javax.swing.JTextField MATRICULA;
     private javax.swing.JButton RegistrarVisita;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel matricula_text;
     // End of variables declaration//GEN-END:variables
 }

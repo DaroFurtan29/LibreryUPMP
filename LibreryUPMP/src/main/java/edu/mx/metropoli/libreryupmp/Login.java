@@ -61,12 +61,12 @@ public class Login extends javax.swing.JFrame {
         jPanel4.add(IMGLOCK, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, -1));
 
         WELCOMETEXT.setBackground(new java.awt.Color(0, 0, 0));
-        WELCOMETEXT.setFont(new java.awt.Font("Gilroy", 1, 30)); // NOI18N
+        WELCOMETEXT.setFont(new java.awt.Font("Gotham", 1, 30)); // NOI18N
         WELCOMETEXT.setForeground(new java.awt.Color(255, 255, 255));
         WELCOMETEXT.setText("W E L C O M E");
-        jPanel4.add(WELCOMETEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 76, -1, -1));
+        jPanel4.add(WELCOMETEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
-        USUARIO.setFont(new java.awt.Font("Gilroy", 0, 24)); // NOI18N
+        USUARIO.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
         USUARIO.setForeground(new java.awt.Color(255, 255, 255));
         USUARIO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/profile.png"))); // NOI18N
         USUARIO.setText("User");
@@ -82,7 +82,7 @@ public class Login extends javax.swing.JFrame {
         });
         jPanel4.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 196, 202, 30));
 
-        CONTRA.setFont(new java.awt.Font("Gilroy", 0, 24)); // NOI18N
+        CONTRA.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
         CONTRA.setForeground(new java.awt.Color(255, 255, 255));
         CONTRA.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/unlock 1.png"))); // NOI18N
         CONTRA.setText("Password");

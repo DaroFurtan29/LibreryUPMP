@@ -59,9 +59,10 @@ public class Main extends javax.swing.JFrame {
         BotonInicio = new javax.swing.JButton();
         BotonVisitas = new javax.swing.JButton();
         BotonLibros = new javax.swing.JButton();
-        BotonPrestamo = new javax.swing.JButton();
+        BotonComputadora = new javax.swing.JButton();
         labelLogo1 = new javax.swing.JLabel();
         Text_LaMetro = new javax.swing.JLabel();
+        BotonPrestamo = new javax.swing.JButton();
         panelBanner = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -142,7 +143,31 @@ public class Main extends javax.swing.JFrame {
                 BotonLibrosActionPerformed(evt);
             }
         });
-        PanelMenu.add(BotonLibros, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 481, 218, 60));
+        PanelMenu.add(BotonLibros, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 547, 218, 60));
+
+        BotonComputadora.setBackground(new java.awt.Color(32, 59, 104));
+        BotonComputadora.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
+        BotonComputadora.setForeground(new java.awt.Color(255, 255, 255));
+        BotonComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/windows-10_1.png"))); // NOI18N
+        BotonComputadora.setText(" Computadoras");
+        BotonComputadora.setBorderPainted(false);
+        BotonComputadora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonComputadora.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        BotonComputadora.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        BotonComputadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonComputadoraActionPerformed(evt);
+            }
+        });
+        PanelMenu.add(BotonComputadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 481, 218, 60));
+
+        labelLogo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M LA METRO.png"))); // NOI18N
+        PanelMenu.add(labelLogo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 150, 100));
+
+        Text_LaMetro.setFont(new java.awt.Font("Gotham Black", 0, 45)); // NOI18N
+        Text_LaMetro.setForeground(new java.awt.Color(255, 255, 255));
+        Text_LaMetro.setText("#LaMetro");
+        PanelMenu.add(Text_LaMetro, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 160, -1, -1));
 
         BotonPrestamo.setBackground(new java.awt.Color(32, 59, 104));
         BotonPrestamo.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -159,14 +184,6 @@ public class Main extends javax.swing.JFrame {
             }
         });
         PanelMenu.add(BotonPrestamo, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 415, 218, 60));
-
-        labelLogo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M LA METRO.png"))); // NOI18N
-        PanelMenu.add(labelLogo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 150, 100));
-
-        Text_LaMetro.setFont(new java.awt.Font("Gotham Black", 0, 45)); // NOI18N
-        Text_LaMetro.setForeground(new java.awt.Color(255, 255, 255));
-        Text_LaMetro.setText("#LaMetro");
-        PanelMenu.add(Text_LaMetro, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 160, -1, -1));
 
         jPanel3.add(PanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 230, 650));
 
@@ -271,13 +288,17 @@ public class Main extends javax.swing.JFrame {
         ShowPanel(new Libros());
     }//GEN-LAST:event_BotonLibrosActionPerformed
 
-    private void BotonPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPrestamoActionPerformed
-        ShowPanel(new Prestamos());
-    }//GEN-LAST:event_BotonPrestamoActionPerformed
+    private void BotonComputadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonComputadoraActionPerformed
+        ShowPanel(new UsoComputadoras());
+    }//GEN-LAST:event_BotonComputadoraActionPerformed
 
     private void BotonVisitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisitasActionPerformed
         ShowPanel(new Visitas());
     }//GEN-LAST:event_BotonVisitasActionPerformed
+
+    private void BotonPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPrestamoActionPerformed
+        ShowPanel(new Prestamos());
+    }//GEN-LAST:event_BotonPrestamoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,6 +336,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonComputadora;
     private javax.swing.JButton BotonInicio;
     private javax.swing.JButton BotonLibros;
     private javax.swing.JButton BotonPrestamo;

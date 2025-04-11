@@ -6,14 +6,14 @@ package Usuarios;
 
 /**
  *
- * @author dell
+ * @author Admin
  */
-public class Prestamo_Alumno extends javax.swing.JPanel {
+public class Prestamo_Docente extends javax.swing.JPanel {
 
     /**
-     * Creates new form Prestamo_Alumno
+     * Creates new form Prestamo_Docente
      */
-    public Prestamo_Alumno() {
+    public Prestamo_Docente() {
         initComponents();
     }
 
@@ -29,30 +29,31 @@ public class Prestamo_Alumno extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
-        setMaximumSize(new java.awt.Dimension(980, 530));
-        setMinimumSize(new java.awt.Dimension(980, 530));
-
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setMaximumSize(new java.awt.Dimension(980, 530));
-        jPanel1.setMinimumSize(new java.awt.Dimension(980, 530));
         jPanel1.setPreferredSize(new java.awt.Dimension(980, 530));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PRESTAMOS DE LIBROS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 15, 980, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
         jLabel2.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("<html><center>Estimado Alumno<p>para cualquier prestamo de libro tiene que llenar el siguente formulario<html>");
+        jLabel2.setText("<html><center>Estimado Docente/Administrativo<p>para cualquier prestamo de libro, tiene que llenar el siguente formulario");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
+
+        jLabel4.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("Num de Control");
+        jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 220, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -60,15 +61,11 @@ public class Prestamo_Alumno extends javax.swing.JPanel {
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, -1, 30));
 
-        jLabel4.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        jLabel4.setText("Matricula");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, 30));
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 400, 30));
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, 400, 30));
-
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 400, 30));
 
         jButton1.setBackground(new java.awt.Color(0, 35, 96));
         jButton1.setFont(new java.awt.Font("Gilroy", 1, 36)); // NOI18N

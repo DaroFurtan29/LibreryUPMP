@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package Usuarios;
+package edu.mx.metropoli.views;
 
 /**
  *
- * @author dell
+ * @author Admin
  */
-public class Computadora_Alumno extends javax.swing.JPanel {
+public class UsoComputadoras extends javax.swing.JPanel {
 
     /**
-     * Creates new form Computadora_Alumno
+     * Creates new form UsoComputadoras
      */
-    public Computadora_Alumno() {
+    public UsoComputadoras() {
         initComponents();
     }
 
@@ -27,27 +27,17 @@ public class Computadora_Alumno extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(980, 530));
-        setMinimumSize(new java.awt.Dimension(980, 530));
+        setMaximumSize(new java.awt.Dimension(1070, 450));
+        setMinimumSize(new java.awt.Dimension(1070, 450));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setMaximumSize(new java.awt.Dimension(980, 530));
-        jPanel1.setMinimumSize(new java.awt.Dimension(980, 530));
-        jPanel1.setPreferredSize(new java.awt.Dimension(980, 530));
+        jPanel1.setAlignmentX(0.0F);
+        jPanel1.setAlignmentY(0.0F);
+        jPanel1.setMaximumSize(new java.awt.Dimension(1070, 450));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1070, 450));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1070, 450));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("USO DE COMPUTADORAS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
-
-        jLabel2.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("<html><center>Estimado Alumno<p>Registrate si usaras un equipo de computo de la Biblioteca de #LaMetro<html>");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -59,14 +49,14 @@ public class Computadora_Alumno extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

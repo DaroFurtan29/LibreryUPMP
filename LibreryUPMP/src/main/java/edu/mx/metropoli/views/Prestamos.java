@@ -67,7 +67,7 @@ public class Prestamos extends javax.swing.JPanel {
 
     public void buscar(String tabla){}
     
-    public void actualizar(){}
+    public void actualizar () {}
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -171,7 +171,7 @@ public class Prestamos extends javax.swing.JPanel {
     }//GEN-LAST:event_MostrarPrestamosActionPerformed
 
     private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
-        // ACTUALIZAR EL REGISTRO DEL PRESTAMO
+        // REGISTRAR EL REGISTRO DEL PRESTAMO
         
         
         

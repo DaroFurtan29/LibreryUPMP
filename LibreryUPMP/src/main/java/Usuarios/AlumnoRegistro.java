@@ -110,7 +110,7 @@ public class AlumnoRegistro extends javax.swing.JFrame {
         COMPUTADORA.setBackground(new java.awt.Color(225, 94, 41));
         COMPUTADORA.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
         COMPUTADORA.setForeground(new java.awt.Color(255, 255, 255));
-        COMPUTADORA.setText("<html><center>USOO DE COMPUTADORA<html>");
+        COMPUTADORA.setText("<html><center>USO DE COMPUTADORA<html>");
         COMPUTADORA.setBorderPainted(false);
         COMPUTADORA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         COMPUTADORA.addActionListener(new java.awt.event.ActionListener() {
@@ -134,7 +134,7 @@ public class AlumnoRegistro extends javax.swing.JFrame {
         jPanel1.add(REGISTRATE, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 175, 75));
 
         REGRESAR.setBackground(new java.awt.Color(0, 35, 96));
-        REGRESAR.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        REGRESAR.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
         REGRESAR.setForeground(new java.awt.Color(255, 255, 255));
         REGRESAR.setText("REGRESAR");
         REGRESAR.setBorderPainted(false);

@@ -86,7 +86,7 @@ public class MaestroRegistro extends javax.swing.JFrame {
         COMPUTADORA.setBackground(new java.awt.Color(225, 94, 41));
         COMPUTADORA.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
         COMPUTADORA.setForeground(new java.awt.Color(255, 255, 255));
-        COMPUTADORA.setText("<html><center>USOO DE COMPUTADORA<html>");
+        COMPUTADORA.setText("<html><center>USO DE COMPUTADORA<html>");
         COMPUTADORA.setBorderPainted(false);
         COMPUTADORA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         COMPUTADORA.addActionListener(new java.awt.event.ActionListener() {
@@ -145,14 +145,14 @@ public class MaestroRegistro extends javax.swing.JFrame {
     private void VISITAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VISITAActionPerformed
         // ver formulario de visitas
 
-        ShowPanel(new Visitas_Alumno());
+        ShowPanel(new Visita_Docente());
 
     }//GEN-LAST:event_VISITAActionPerformed
 
     private void PRESTAMOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PRESTAMOActionPerformed
         // Ver formulario de prestamo de libros
 
-        ShowPanel(new Prestamo_Alumno());
+        ShowPanel(new Prestamo_Docente());
 
     }//GEN-LAST:event_PRESTAMOActionPerformed
 
@@ -166,7 +166,7 @@ public class MaestroRegistro extends javax.swing.JFrame {
     private void REGISTRATEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGISTRATEActionPerformed
         // formulario de registro
 
-        ShowPanel(new Registro_Alumno());
+        ShowPanel(new Registro_Docente());
 
     }//GEN-LAST:event_REGISTRATEActionPerformed
 

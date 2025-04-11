@@ -64,23 +64,23 @@ public class Visitas extends javax.swing.JPanel {
 }
     
     public void Genero(String tabla){
-        String sql = "SELECT a.Nombre as alumno, a.Matricula as alumno, a.Genero as alumno, c.Carrera as carreras, FechaVisita FROM visita v JOIN alumno a ON v.IDalumno = a.IDalumno JOIN carreras c ON v.IDalumno = c.idCarreras ORDER BY FechaVisita ASC;" + tabla;
+        String sql = "SELECT a.Genero as alumno, count(a.Genero) as Total FROM visita v INNER JOIN alumno a ON v.IDalumno = a.IDalumno WHERE a.Genero = \"H\" or a.Genero = \"M\" GROUP BY Genero;" + tabla;
         System.out.println(sql);
         Statement st;
         Conectar con = new Conectar();
         Connection conexion = con.conectarToDB();
         DefaultTableModel model = new DefaultTableModel();
-        model.addColumn("Alumno");
-        model.addColumn("Matricula");
+        model.addColumn("Genero");
+        model.addColumn("Total");
         TOTAL_VISITAS.setModel(model);
-        TOTAL_VISITAS.getColumnModel().getColumn(0).setPreferredWidth(150);
-        TOTAL_VISITAS.getColumnModel().getColumn(1).setPreferredWidth(65);
+        TOTAL_VISITAS.getColumnModel().getColumn(0).setPreferredWidth(45);
+        TOTAL_VISITAS.getColumnModel().getColumn(1).setPreferredWidth(45);
         TOTAL_VISITAS.getColumnModel().getColumn(0).setResizable(false);
         TOTAL_VISITAS.getColumnModel().getColumn(1).setResizable(false);
 
         
-        VISITA.setRowSelectionAllowed(false);
-        VISITA.setRowHeight(25);
+        TOTAL_VISITAS.setRowSelectionAllowed(false);
+        TOTAL_VISITAS.setRowHeight(25);
         
         String [] datos = new String[2];
         try{
@@ -112,6 +112,7 @@ public class Visitas extends javax.swing.JPanel {
         ACTUALIZAR = new javax.swing.JButton();
         boton_alumno = new javax.swing.JRadioButton();
         boton_docente = new javax.swing.JRadioButton();
+        CONCENTRAR = new javax.swing.JButton();
 
         setMaximumSize(new java.awt.Dimension(1070, 450));
         setMinimumSize(new java.awt.Dimension(1070, 450));
@@ -143,20 +144,17 @@ public class Visitas extends javax.swing.JPanel {
 
         TOTAL_VISITAS.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
-                "Mujeres", "Hombres"
+
             }
         ));
         jScrollPane2.setViewportView(TOTAL_VISITAS);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 90, 150, 200));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 90, 150, 110));
 
-        REGISTRAR.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
+        REGISTRAR.setFont(new java.awt.Font("Gilroy", 0, 18)); // NOI18N
         REGISTRAR.setText("REGISTRAR");
         REGISTRAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,7 +163,7 @@ public class Visitas extends javax.swing.JPanel {
         });
         jPanel1.add(REGISTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 160, -1));
 
-        ACTUALIZAR.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
+        ACTUALIZAR.setFont(new java.awt.Font("Gilroy", 0, 18)); // NOI18N
         ACTUALIZAR.setText("ACTUALIZAR");
         ACTUALIZAR.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -183,6 +181,15 @@ public class Visitas extends javax.swing.JPanel {
         boton_docente.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
         boton_docente.setText("Docente");
         jPanel1.add(boton_docente, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
+
+        CONCENTRAR.setFont(new java.awt.Font("Gilroy", 0, 18)); // NOI18N
+        CONCENTRAR.setText("CONCENTRAR");
+        CONCENTRAR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CONCENTRARActionPerformed(evt);
+            }
+        });
+        jPanel1.add(CONCENTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 230, 150, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -218,9 +225,15 @@ public class Visitas extends javax.swing.JPanel {
         Actualizar("");
     }//GEN-LAST:event_ACTUALIZARActionPerformed
 
+    private void CONCENTRARActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CONCENTRARActionPerformed
+        // ACTUALIZAR TABLA DE TOTALES POR GENERO
+        Genero("");
+    }//GEN-LAST:event_CONCENTRARActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton ACTUALIZAR;
+    private javax.swing.JButton CONCENTRAR;
     private javax.swing.ButtonGroup GRUPO_REGISTRO;
     private javax.swing.JButton REGISTRAR;
     private javax.swing.JLabel TEXT_TOTAL;
