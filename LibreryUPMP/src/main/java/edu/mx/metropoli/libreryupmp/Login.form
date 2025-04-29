@@ -7,7 +7,7 @@
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Programa de Adminstracion de la Libreria de la Universidad Pol&#xed;tecnica Metropolitana de Puebla"/>
+    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Programa de Adminstracion de la Biblioteca de la Universidad Pol&#xed;tecnica Metropolitana de Puebla"/>
   </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>

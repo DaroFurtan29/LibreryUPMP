@@ -4,25 +4,14 @@ package Usuarios;
 import edu.mx.metropoli.libreryupmp.Usuario;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 
 // @author #LaMetro
 
 public class AlumnoRegistro extends javax.swing.JFrame {
 
-
     public AlumnoRegistro() {
         initComponents();
-        SetDate(); 
         initContent();
-    }
-    
-    private void SetDate() {
-        LocalDate now = LocalDate.now();
-        Locale spanishLocale = new Locale("es", "ES");
-        // dateText.setText(now.format(DateTimeFormatter.ofPattern("'Hoy es' EEEE dd 'de' MMMM 'de' yyyy", spanishLocale)));
     }
     
     private void ShowPanel(JPanel p) {
@@ -60,6 +49,7 @@ public class AlumnoRegistro extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1250, 700));
         setMinimumSize(new java.awt.Dimension(1250, 700));
         setPreferredSize(new java.awt.Dimension(1250, 700));
+        setResizable(false);
         setSize(new java.awt.Dimension(1250, 700));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -145,6 +135,7 @@ public class AlumnoRegistro extends javax.swing.JFrame {
         });
         jPanel1.add(REGRESAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(45, 555, 150, 60));
 
+        ventana.setBackground(new java.awt.Color(255, 255, 255));
         ventana.setMaximumSize(new java.awt.Dimension(980, 530));
         ventana.setMinimumSize(new java.awt.Dimension(980, 530));
 

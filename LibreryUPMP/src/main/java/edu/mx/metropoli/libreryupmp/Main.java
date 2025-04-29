@@ -84,12 +84,13 @@ public class Main extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1350, 700));
         setMinimumSize(new java.awt.Dimension(1350, 700));
         setPreferredSize(new java.awt.Dimension(1350, 700));
+        setResizable(false);
         setSize(new java.awt.Dimension(1350, 700));
 
         jPanel3.setBackground(new java.awt.Color(0, 32, 96));
-        jPanel3.setMaximumSize(new java.awt.Dimension(1340, 680));
-        jPanel3.setMinimumSize(new java.awt.Dimension(1340, 680));
-        jPanel3.setPreferredSize(new java.awt.Dimension(1340, 680));
+        jPanel3.setMaximumSize(new java.awt.Dimension(1350, 700));
+        jPanel3.setMinimumSize(new java.awt.Dimension(1350, 700));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1350, 700));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         PanelMenu.setBackground(new java.awt.Color(225, 94, 41));
@@ -162,12 +163,12 @@ public class Main extends javax.swing.JFrame {
         PanelMenu.add(BotonComputadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 481, 218, 60));
 
         labelLogo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M LA METRO.png"))); // NOI18N
-        PanelMenu.add(labelLogo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 150, 100));
+        PanelMenu.add(labelLogo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 60, 150, 100));
 
-        Text_LaMetro.setFont(new java.awt.Font("Gotham Black", 0, 45)); // NOI18N
+        Text_LaMetro.setFont(new java.awt.Font("Gotham Black", 0, 30)); // NOI18N
         Text_LaMetro.setForeground(new java.awt.Color(255, 255, 255));
-        Text_LaMetro.setText("#LaMetro");
-        PanelMenu.add(Text_LaMetro, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 160, -1, -1));
+        Text_LaMetro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/LAMETRO.png"))); // NOI18N
+        PanelMenu.add(Text_LaMetro, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 160, -1, -1));
 
         BotonPrestamo.setBackground(new java.awt.Color(32, 59, 104));
         BotonPrestamo.setFont(new java.awt.Font("Ebrima", 1, 18)); // NOI18N
@@ -248,6 +249,11 @@ public class Main extends javax.swing.JFrame {
         jPanel3.add(PanelDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 20, 1040, 50));
 
         content.setBackground(new java.awt.Color(255, 255, 255));
+        content.setAlignmentX(0.0F);
+        content.setAlignmentY(0.0F);
+        content.setMaximumSize(new java.awt.Dimension(1070, 450));
+        content.setMinimumSize(new java.awt.Dimension(1070, 450));
+        content.setPreferredSize(new java.awt.Dimension(1070, 450));
 
         javax.swing.GroupLayout contentLayout = new javax.swing.GroupLayout(content);
         content.setLayout(contentLayout);
@@ -276,7 +282,7 @@ public class Main extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("Libreria #LaMetro");
         getAccessibleContext().setAccessibleDescription("Administracion del Porgrama de la Libreria #LaMetro");
 
-        setSize(new java.awt.Dimension(1366, 708));
+        setSize(new java.awt.Dimension(1366, 718));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

@@ -5,14 +5,13 @@ import edu.mx.metropoli.libreryupmp.Usuario;
 import java.awt.BorderLayout;
 import javax.swing.JPanel;
 
-/**
- *
- * @author dell
- */
+// @author #LaMetro
+
 public class MaestroRegistro extends javax.swing.JFrame {
 
     public MaestroRegistro() {
         initComponents();
+        initContent();
     }
 
     private void ShowPanel(JPanel p) {
@@ -23,6 +22,10 @@ public class MaestroRegistro extends javax.swing.JFrame {
         ventana.add(p, BorderLayout.CENTER);
         ventana.revalidate();
         ventana.repaint();
+    }
+    
+    private void initContent() {
+        ShowPanel(new Visita_Docente());
     }
     
     @SuppressWarnings("unchecked")
@@ -41,6 +44,7 @@ public class MaestroRegistro extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registro de Docentes/Adminstrativos");
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(32, 59, 104));
@@ -53,7 +57,7 @@ public class MaestroRegistro extends javax.swing.JFrame {
         TITULO_TEXT.setFont(new java.awt.Font("Gotham", 1, 20)); // NOI18N
         TITULO_TEXT.setForeground(new java.awt.Color(255, 255, 255));
         TITULO_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TITULO_TEXT.setText("<html><center>BIENVENIDO DOCENTE / ADMINISTRATIVO AL<p>PROGRAMA DE ADMINISTRACION BIBLIOTECARIA #LaMetro<html>");
+        TITULO_TEXT.setText("<html><center>BIENVENIDO DOCENTE / PERSONAL ADMINISTRATIVO AL<p>PROGRAMA DE ADMINISTRACION BIBLIOTECARIA #LaMetro<html>");
         jPanel1.add(TITULO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 980, 90));
 
         VISITA.setBackground(new java.awt.Color(225, 94, 41));
@@ -109,6 +113,10 @@ public class MaestroRegistro extends javax.swing.JFrame {
         });
         jPanel1.add(REGISTRATE, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 380, 175, 75));
 
+        ventana.setBackground(new java.awt.Color(255, 255, 255));
+        ventana.setMaximumSize(new java.awt.Dimension(980, 530));
+        ventana.setMinimumSize(new java.awt.Dimension(980, 530));
+
         javax.swing.GroupLayout ventanaLayout = new javax.swing.GroupLayout(ventana);
         ventana.setLayout(ventanaLayout);
         ventanaLayout.setHorizontalGroup(
@@ -123,7 +131,7 @@ public class MaestroRegistro extends javax.swing.JFrame {
         jPanel1.add(ventana, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 980, 530));
 
         REGRESAR.setBackground(new java.awt.Color(0, 35, 96));
-        REGRESAR.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        REGRESAR.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
         REGRESAR.setForeground(new java.awt.Color(255, 255, 255));
         REGRESAR.setText("REGRESAR");
         REGRESAR.setBorderPainted(false);
@@ -159,7 +167,7 @@ public class MaestroRegistro extends javax.swing.JFrame {
     private void COMPUTADORAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_COMPUTADORAActionPerformed
         // Ver formulario de uso de la computadoras
 
-        ShowPanel(new Computadora_Alumno());
+        ShowPanel(new Computadora_Docente());
 
     }//GEN-LAST:event_COMPUTADORAActionPerformed
 

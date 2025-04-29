@@ -24,6 +24,7 @@ public class Visitas_Alumno extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         MATRICULA = new javax.swing.JTextField();
         RegistrarVisita = new javax.swing.JButton();
+        FONDO = new javax.swing.JLabel();
 
         setMaximumSize(new java.awt.Dimension(980, 530));
         setMinimumSize(new java.awt.Dimension(980, 530));
@@ -33,16 +34,22 @@ public class Visitas_Alumno extends javax.swing.JPanel {
         jPanel1.setMinimumSize(new java.awt.Dimension(980, 530));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        matricula_text.setBackground(new java.awt.Color(0, 0, 0));
         matricula_text.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
+        matricula_text.setForeground(new java.awt.Color(0, 0, 0));
         matricula_text.setText("MATRICULA");
         jPanel1.add(matricula_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, -1, 40));
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Gotham", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("<html><center>Estimado Alumno, para llevar un control de las vistas de la Biblioteca<p>solo debes teclar tu Matricula Institucional<html>");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, 60));
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("REGISTRA TU VISITA");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
@@ -64,6 +71,10 @@ public class Visitas_Alumno extends javax.swing.JPanel {
         });
         jPanel1.add(RegistrarVisita, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 380, 50));
 
+        FONDO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/M MARCA DE AGUA.png"))); // NOI18N
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(-378, 10, 755, 510));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -78,21 +89,22 @@ public class Visitas_Alumno extends javax.swing.JPanel {
 
     private void RegistrarVisitaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarVisitaActionPerformed
         // REGISTRAR VISITAS
-            Conectar con = new Conectar();
-            Connection conexion = con.conectarToDB();
-            String m ="";
-            String query = "";
-            
-            m=MATRICULA.getText();
-            
-            query = "INSERT INTO visita (IDalumno,FechaVisita) VALUES (?,now());";
-            // INSERT INTO visita (IDalumno,FechaVisita) VALUES (2022120077,now());
-            
+        Conectar con = new Conectar();
+        Connection conexion = con.conectarToDB();
+        String m ="";
+        String query = "";
+        
+        m=MATRICULA.getText();
+        
+        query = "INSERT INTO visita (IDalumno,FechaVisita) VALUES ((select IDalumno from alumno where Matricula = ?),now());";
+        //INSERT INTO visita (IDalumno,FechaVisita) values ((select IDalumno from alumno where Matricula = 2023111202), now());
+        
         try{
             PreparedStatement pst = conexion.prepareStatement(query);
             
             pst.setString(1, m);
             int n=pst.executeUpdate();
+            
             if(n>0){
                 JOptionPane.showMessageDialog(null, "REGISTRO EXITOSO");
             }
@@ -101,11 +113,11 @@ public class Visitas_Alumno extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "ERROR DE REGISTRO");
         }
         
-        
     }//GEN-LAST:event_RegistrarVisitaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel FONDO;
     private javax.swing.JTextField MATRICULA;
     private javax.swing.JButton RegistrarVisita;
     private javax.swing.JLabel jLabel2;

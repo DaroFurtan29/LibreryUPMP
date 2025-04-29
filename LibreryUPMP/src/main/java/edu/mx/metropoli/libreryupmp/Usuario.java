@@ -16,24 +16,24 @@ public class Usuario extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         TextoBiblioteca = new javax.swing.JLabel();
-        LOGO_LIBRO = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         ADMINSTRADOR = new javax.swing.JToggleButton();
         ALUMNO = new javax.swing.JToggleButton();
         MAESTRO = new javax.swing.JToggleButton();
+        FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Selecciona Usuario UPMP");
         setMaximumSize(new java.awt.Dimension(700, 500));
         setMinimumSize(new java.awt.Dimension(700, 500));
         setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(225, 94, 42));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(32, 59, 104));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TextoBiblioteca.setFont(new java.awt.Font("Gilroy", 3, 48)); // NOI18N
         TextoBiblioteca.setForeground(new java.awt.Color(255, 255, 255));
@@ -41,31 +41,17 @@ public class Usuario extends javax.swing.JFrame {
         TextoBiblioteca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LOGO M c-letra LAMETRO.png"))); // NOI18N
         TextoBiblioteca.setText("Biblioteca #LaMetro");
         TextoBiblioteca.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TextoBiblioteca, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(TextoBiblioteca, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
-        );
+        jPanel2.add(TextoBiblioteca, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 130));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 680, 130));
-
-        LOGO_LIBRO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        LOGO_LIBRO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/LIBRO ICON.png"))); // NOI18N
-        jPanel1.add(LOGO_LIBRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 380, 150, -1));
 
         jLabel2.setFont(new java.awt.Font("Gilroy", 1, 50)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("BIENVENIDO");
+        jLabel2.setText("B I E N V E N I D O");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 150, 700, -1));
 
-        jLabel3.setFont(new java.awt.Font("Montserrat", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Montserrat", 3, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Selecciona tu Usuario");
@@ -115,7 +101,19 @@ public class Usuario extends javax.swing.JFrame {
         });
         jPanel1.add(MAESTRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 390, 223, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
+        FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/book banner2.png"))); // NOI18N
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 500));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         getAccessibleContext().setAccessibleName("Libreria #LaMetro");
         getAccessibleContext().setAccessibleDescription("");
@@ -186,7 +184,7 @@ public class Usuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton ADMINSTRADOR;
     private javax.swing.JToggleButton ALUMNO;
-    private javax.swing.JLabel LOGO_LIBRO;
+    private javax.swing.JLabel FONDO;
     private javax.swing.JToggleButton MAESTRO;
     private javax.swing.JLabel TextoBiblioteca;
     private javax.swing.JLabel jLabel2;

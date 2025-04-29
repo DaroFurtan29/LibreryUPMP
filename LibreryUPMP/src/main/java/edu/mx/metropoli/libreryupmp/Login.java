@@ -113,7 +113,7 @@ public class Login extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 500));
 
-        getAccessibleContext().setAccessibleDescription("Programa de Adminstracion de la Libreria de la Universidad Polítecnica Metropolitana de Puebla");
+        getAccessibleContext().setAccessibleDescription("Programa de Adminstracion de la Biblioteca de la Universidad Polítecnica Metropolitana de Puebla");
 
         pack();
         setLocationRelativeTo(null);

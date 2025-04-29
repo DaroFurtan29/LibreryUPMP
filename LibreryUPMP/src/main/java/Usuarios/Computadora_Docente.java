@@ -8,9 +8,10 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
-public class Computadora_Alumno extends javax.swing.JPanel {
 
-    public Computadora_Alumno() {
+public class Computadora_Docente extends javax.swing.JPanel {
+
+    public Computadora_Docente() {
         initComponents();
     }
 
@@ -18,20 +19,26 @@ public class Computadora_Alumno extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         DESCRIPCION_TEXT = new javax.swing.JLabel();
-        REGISTRO = new javax.swing.JButton();
-        MATRICULA_TEXT = new javax.swing.JLabel();
-        MATRICULA = new javax.swing.JTextField();
+        NUMERODOCENTE_TEXT = new javax.swing.JLabel();
+        DOCENTE = new javax.swing.JTextField();
         COMPUTADORA_TEXT = new javax.swing.JLabel();
-        COMPUTADORAS = new javax.swing.JComboBox<>();
+        COMPUTADORA = new javax.swing.JComboBox<>();
+        REGISTRO = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/MARCA DE AGUA LA METRO.png"))); // NOI18N
 
         setMaximumSize(new java.awt.Dimension(980, 530));
         setMinimumSize(new java.awt.Dimension(980, 530));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setAlignmentX(0.0F);
+        jPanel1.setAlignmentY(0.0F);
         jPanel1.setMaximumSize(new java.awt.Dimension(980, 530));
         jPanel1.setMinimumSize(new java.awt.Dimension(980, 530));
         jPanel1.setPreferredSize(new java.awt.Dimension(980, 530));
@@ -46,8 +53,25 @@ public class Computadora_Alumno extends javax.swing.JPanel {
         DESCRIPCION_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         DESCRIPCION_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         DESCRIPCION_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        DESCRIPCION_TEXT.setText("<html><center>Estimado Alumno<p>Registrate si usaras un equipo de computo de la Biblioteca de #LaMetro<html>");
+        DESCRIPCION_TEXT.setText("<html><center>Estimado Docente/Personal Administrativo<p>Registrate si usaras un equipo de computo de la Biblioteca de #LaMetro<html>");
         jPanel1.add(DESCRIPCION_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
+
+        NUMERODOCENTE_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        NUMERODOCENTE_TEXT.setForeground(new java.awt.Color(0, 0, 0));
+        NUMERODOCENTE_TEXT.setText("Numero de Control");
+        jPanel1.add(NUMERODOCENTE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, 30));
+
+        DOCENTE.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        jPanel1.add(DOCENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 180, 320, 30));
+
+        COMPUTADORA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        COMPUTADORA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
+        COMPUTADORA_TEXT.setText("<html><center>Numero de<p>Computadora<html>");
+        jPanel1.add(COMPUTADORA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 330, -1, 60));
+
+        COMPUTADORA.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        COMPUTADORA.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "1", "2", "3", "4", "6", "7" }));
+        jPanel1.add(COMPUTADORA, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 350, 320, 30));
 
         REGISTRO.setBackground(new java.awt.Color(0, 32, 96));
         REGISTRO.setFont(new java.awt.Font("Gilroy", 0, 36)); // NOI18N
@@ -60,23 +84,6 @@ public class Computadora_Alumno extends javax.swing.JPanel {
             }
         });
         jPanel1.add(REGISTRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 250, -1, 60));
-
-        MATRICULA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        MATRICULA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
-        MATRICULA_TEXT.setText("Matricula");
-        jPanel1.add(MATRICULA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, -1, 30));
-
-        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
-        jPanel1.add(MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 180, 320, 30));
-
-        COMPUTADORA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        COMPUTADORA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
-        COMPUTADORA_TEXT.setText("<html><center>Numero de<p>Computadora<html>");
-        jPanel1.add(COMPUTADORA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 330, -1, 60));
-
-        COMPUTADORAS.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
-        COMPUTADORAS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "1", "2", "3", "4", "6", "7" }));
-        jPanel1.add(COMPUTADORAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 350, 320, 30));
 
         FONDO.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/M MARCA DE AGUA.png"))); // NOI18N
@@ -92,11 +99,10 @@ public class Computadora_Alumno extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    
     private void REGISTROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_REGISTROActionPerformed
         //REGISTRAR ALUMNO
         Conectar con = new Conectar();
@@ -105,8 +111,8 @@ public class Computadora_Alumno extends javax.swing.JPanel {
         int com=0;
         String query = "";
 
-        m=MATRICULA.getText();
-        com=COMPUTADORAS.getSelectedIndex();
+        m=DOCENTE.getText();
+        com=COMPUTADORA.getSelectedIndex();
         query = "INSERT INTO computadora VALUES (default, (select IDalumno from alumno where Matricula = ?),?,now());";
         try{
             PreparedStatement pst = conexion.prepareStatement(query);
@@ -122,19 +128,19 @@ public class Computadora_Alumno extends javax.swing.JPanel {
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "ERROR DE REGISTRO");
         }
-
     }//GEN-LAST:event_REGISTROActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> COMPUTADORAS;
+    private javax.swing.JComboBox<String> COMPUTADORA;
     private javax.swing.JLabel COMPUTADORA_TEXT;
     private javax.swing.JLabel DESCRIPCION_TEXT;
+    private javax.swing.JTextField DOCENTE;
     private javax.swing.JLabel FONDO;
-    private javax.swing.JTextField MATRICULA;
-    private javax.swing.JLabel MATRICULA_TEXT;
+    private javax.swing.JLabel NUMERODOCENTE_TEXT;
     private javax.swing.JButton REGISTRO;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
