@@ -279,7 +279,7 @@ public class Main extends javax.swing.JFrame {
             .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getAccessibleContext().setAccessibleName("Libreria #LaMetro");
+        getAccessibleContext().setAccessibleName("Administracion de la Biblioteca #LaMetro");
         getAccessibleContext().setAccessibleDescription("Administracion del Porgrama de la Libreria #LaMetro");
 
         setSize(new java.awt.Dimension(1366, 718));

@@ -7,7 +7,8 @@
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Registrar la visita, prestamo de libros o uso de computadoras de la Biblioteca"/>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Programa de Administracion Bibliotecaria #LaMetro"/>
+    <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Programa que registrar la visita, prestamo de libros y/o uso de computadoras de la Biblioteca de la Universidad Politecnica Metropolitana de Puebla"/>
   </AccessibilityProperties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>

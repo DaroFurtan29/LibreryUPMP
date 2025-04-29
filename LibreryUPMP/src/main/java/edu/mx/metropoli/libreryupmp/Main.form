@@ -33,7 +33,7 @@
     </Property>
   </Properties>
   <AccessibilityProperties>
-    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Libreria #LaMetro"/>
+    <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Administracion de la Biblioteca #LaMetro"/>
     <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Administracion del Porgrama de la Libreria #LaMetro"/>
   </AccessibilityProperties>
   <SyntheticProperties>

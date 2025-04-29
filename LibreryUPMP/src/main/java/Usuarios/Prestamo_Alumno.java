@@ -40,33 +40,31 @@ public class Prestamo_Alumno extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TITULO_TEXT.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
-        TITULO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         TITULO_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TITULO_TEXT.setText("PRESTAMOS DE LIBROS");
         TITULO_TEXT.setAlignmentY(0.0F);
         jPanel1.add(TITULO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
         DESCRIPCION_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        DESCRIPCION_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         DESCRIPCION_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         DESCRIPCION_TEXT.setText("<html><center>Estimado Alumno<p>para cualquier prestamo o devolucion del libro tiene que llenar los siguientes campos<html>");
         jPanel1.add(DESCRIPCION_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
 
+        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         MATRICULA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 400, 30));
+        jPanel1.add(MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 400, -1));
 
         LIBRO_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        LIBRO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         LIBRO_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         LIBRO_TEXT.setText("Titulo del Libro");
         LIBRO_TEXT.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jPanel1.add(LIBRO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, 30));
 
+        LIBRO.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         LIBRO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(LIBRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 400, 30));
+        jPanel1.add(LIBRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 400, -1));
 
         MATRICULA_TEXT1.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        MATRICULA_TEXT1.setForeground(new java.awt.Color(0, 0, 0));
         MATRICULA_TEXT1.setText("Matricula");
         jPanel1.add(MATRICULA_TEXT1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, -1, 30));
 
@@ -126,14 +124,14 @@ public class Prestamo_Alumno extends javax.swing.JPanel {
         m=MATRICULA.getText();
         l=LIBRO.getText();
         
-        query = "INSERT INTO prestamo values (default,(select IDlibro from libro where UPPER(Titulo) LIKE '%?%'),(select IDalumno from alumno where Matricula = ?),now(),null);";
+        query = "INSERT INTO prestamo values (default,(select IDlibro from libro where UPPER(Titulo) LIKE ?),(select IDalumno from alumno where Matricula = ?),now(),null);";
         //       INSERT INTO prestamo values (default,(select IDlibro from libro where UPPER(Titulo) LIKE '%algebra lineal%'),(select IDalumno from alumno where Matricula = 2023140013),now(),null);
         
         try{
             PreparedStatement pst = conexion.prepareStatement(query);
             
-            pst.setString(1, m);
             pst.setString(1, l);
+            pst.setString(2, m);
             int n=pst.executeUpdate();
             
             if(n>0){

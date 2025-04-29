@@ -104,17 +104,16 @@ public class Prestamos extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Matricula");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 410, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 410, -1, 21));
 
         jLabel8.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("Préstamos");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, -1));
 
-        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
+        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
+        MATRICULA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         MATRICULA.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 MATRICULAKeyReleased(evt);

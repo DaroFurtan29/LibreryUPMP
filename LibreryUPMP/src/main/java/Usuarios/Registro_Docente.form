@@ -56,9 +56,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gotham" size="36" style="3"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="REGISTRO DE DOCENTES/ADMINISTRATIVOS"/>
           </Properties>
@@ -72,9 +69,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gotham" size="25" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -92,9 +86,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gotham" size="25" style="0"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Nombre"/>
           </Properties>
           <Constraints>
@@ -106,7 +97,7 @@
         <Component class="javax.swing.JTextField" name="NOMBRE">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Gotham" size="25" style="0"/>
+              <Font name="Gotham" size="23" style="0"/>
             </Property>
           </Properties>
           <Constraints>
@@ -120,9 +111,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gotham" size="25" style="0"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Numero de Control"/>
           </Properties>
           <Constraints>
@@ -134,7 +122,7 @@
         <Component class="javax.swing.JTextField" name="NUMERODOCENTE">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Gotham" size="25" style="0"/>
+              <Font name="Gotham" size="23" style="0"/>
             </Property>
           </Properties>
           <Constraints>
@@ -147,9 +135,6 @@
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gotham" size="25" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
               <Connection code="&quot;&lt;html&gt;Correo&lt;p&gt;Institucional&lt;hmtl&gt;&quot;" type="code"/>
@@ -164,7 +149,7 @@
         <Component class="javax.swing.JTextField" name="CORREO">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Gotham" size="25" style="0"/>
+              <Font name="Gotham" size="23" style="0"/>
             </Property>
           </Properties>
           <Constraints>
@@ -178,9 +163,6 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gotham" size="25" style="0"/>
             </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
             <Property name="text" type="java.lang.String" value="Genero"/>
           </Properties>
           <Constraints>
@@ -192,7 +174,7 @@
         <Component class="javax.swing.JTextField" name="GENERO">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Gotham" size="25" style="0"/>
+              <Font name="Gotham" size="23" style="0"/>
             </Property>
           </Properties>
           <Constraints>

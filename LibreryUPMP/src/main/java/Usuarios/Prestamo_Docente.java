@@ -35,36 +35,34 @@ public class Prestamo_Docente extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("PRESTAMOS DE LIBROS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
         jLabel2.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("<html><center>Estimado Docente/Personal Administrativo<p>para cualquier prestamo o devolucion del libro tiene que llenar los siguientes campos");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
 
         jLabel4.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Num de Control");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, 30));
 
         jLabel3.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Titulo del Libro");
         jLabel3.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, 30));
 
+        NUMERODOCENTE.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         NUMERODOCENTE.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(NUMERODOCENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 400, 30));
+        jPanel1.add(NUMERODOCENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 400, -1));
 
+        LIBRO.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
         LIBRO.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jPanel1.add(LIBRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 400, 30));
+        jPanel1.add(LIBRO, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 400, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 35, 96));
         jButton1.setFont(new java.awt.Font("Gilroy", 1, 36)); // NOI18N
@@ -114,7 +112,7 @@ public class Prestamo_Docente extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // REGISTRAR EL PRESTAMO DEL LIBRO
-        //INSERT INTO prestamo values (default,(select IDlibro from libro where Titulo = 2023140013),(select IDalumno from alumno where Matricula = 2023140013),now(),null,1);
+        //INSERT INTO prestamo values (default,(select IDlibro from libro where Titulo = ?),(select IDalumno from alumno where Matricula = 2023140013),now(),null,1);
         Conectar con = new Conectar();
         Connection conexion = con.conectarToDB();
         String m,l ="";
@@ -123,14 +121,14 @@ public class Prestamo_Docente extends javax.swing.JPanel {
         m=NUMERODOCENTE.getText();
         l=LIBRO.getText();
         
-        query = "INSERT INTO prestamo values (default,(select IDlibro from libro where UPPER(Titulo) LIKE '%?%'),(select IDalumno from alumno where Matricula = ?),now(),null);";
+        query = "INSERT INTO prestamo values (default,(select IDlibro from libro where UPPER(Titulo) LIKE ?),(select IDalumno from alumno where Matricula = ?),now(),null);";
         //       INSERT INTO prestamo values (default,(select IDlibro from libro where UPPER(Titulo) LIKE '%algebra lineal%'),(select IDalumno from alumno where Matricula = 2023140013),now(),null);
         
         try{
             PreparedStatement pst = conexion.prepareStatement(query);
             
-            pst.setString(1, m);
             pst.setString(1, l);
+            pst.setString(2, m);
             int n=pst.executeUpdate();
             
             if(n>0){

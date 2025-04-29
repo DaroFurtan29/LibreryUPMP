@@ -115,8 +115,8 @@ public class Usuario extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        getAccessibleContext().setAccessibleName("Libreria #LaMetro");
-        getAccessibleContext().setAccessibleDescription("");
+        getAccessibleContext().setAccessibleName("Biblioteca #LaMetro");
+        getAccessibleContext().setAccessibleDescription("Programa de Adminstracion Bibliotecaria de la Universidad Politecnica Metropolitana de Puebla");
 
         pack();
         setLocationRelativeTo(null);

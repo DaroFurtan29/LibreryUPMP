@@ -43,27 +43,28 @@ public class Registro_Alumno extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TITULO_TEXT.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
-        TITULO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         TITULO_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TITULO_TEXT.setText("REGISTRO DE ALUMNO");
         jPanel1.add(TITULO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
         DESCRIPCION_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        DESCRIPCION_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         DESCRIPCION_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         DESCRIPCION_TEXT.setText("<html><center>Estimado Alumno<p>Registrate si vienes por primera vez a la Biblioteca de #LaMetro<html>");
         jPanel1.add(DESCRIPCION_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
 
         NOMBRE_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        NOMBRE_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         NOMBRE_TEXT.setText("Nombre");
         jPanel1.add(NOMBRE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, 30));
 
         NOMBRE.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
+        NOMBRE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NOMBREActionPerformed(evt);
+            }
+        });
         jPanel1.add(NOMBRE, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 160, 320, 30));
 
         MATRICULA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        MATRICULA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         MATRICULA_TEXT.setText("Matricula");
         jPanel1.add(MATRICULA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, 30));
 
@@ -71,7 +72,6 @@ public class Registro_Alumno extends javax.swing.JPanel {
         jPanel1.add(MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 320, 30));
 
         CARRERA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        CARRERA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         CARRERA_TEXT.setText("Carrera");
         jPanel1.add(CARRERA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 280, -1, 30));
 
@@ -80,7 +80,6 @@ public class Registro_Alumno extends javax.swing.JPanel {
         jPanel1.add(CARRERA, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 280, 320, -1));
 
         CORREO_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        CORREO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         CORREO_TEXT.setText("<html>Correo <p>Institucional<hmtl>");
         jPanel1.add(CORREO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 325, -1, 60));
 
@@ -91,7 +90,6 @@ public class Registro_Alumno extends javax.swing.JPanel {
         jPanel1.add(GENERO, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 320, 30));
 
         GENERO_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        GENERO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         GENERO_TEXT.setText("Genero");
         jPanel1.add(GENERO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 400, -1, 30));
 
@@ -158,6 +156,10 @@ public class Registro_Alumno extends javax.swing.JPanel {
         }
         
     }//GEN-LAST:event_REGISTROActionPerformed
+
+    private void NOMBREActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NOMBREActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NOMBREActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

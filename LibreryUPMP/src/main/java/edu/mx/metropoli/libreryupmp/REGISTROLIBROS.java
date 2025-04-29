@@ -46,45 +46,38 @@ public class REGISTROLIBROS extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 550));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Gotham Bold", 2, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Gotham Black", 2, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("REGISTRO DE LIBROS NUEVOS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 50));
 
-        DESCRIPCION_TEXT.setFont(new java.awt.Font("Gotham Bold", 2, 18)); // NOI18N
-        DESCRIPCION_TEXT.setForeground(new java.awt.Color(0, 0, 0));
+        DESCRIPCION_TEXT.setFont(new java.awt.Font("Gotham", 0, 18)); // NOI18N
         DESCRIPCION_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         DESCRIPCION_TEXT.setText("<html><center>Registre los Libros Nuevos que ingresan a la<p>Biblioteca de la Universidad Politecnica Metropolitana de Puebla<html>");
         jPanel1.add(DESCRIPCION_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 800, 100));
 
         LIBRO_TITULO_TEXT.setBackground(new java.awt.Color(0, 0, 0));
         LIBRO_TITULO_TEXT.setFont(new java.awt.Font("Gotham", 0, 16)); // NOI18N
-        LIBRO_TITULO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         LIBRO_TITULO_TEXT.setText("Titulo del Libro");
         jPanel1.add(LIBRO_TITULO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 225, 30));
 
         AUTOR_TEXT.setBackground(new java.awt.Color(0, 0, 0));
         AUTOR_TEXT.setFont(new java.awt.Font("Gotham", 0, 16)); // NOI18N
-        AUTOR_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         AUTOR_TEXT.setText("Autor");
         jPanel1.add(AUTOR_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 225, 30));
 
         CODIGO_LIBRO_TEXT.setBackground(new java.awt.Color(0, 0, 0));
         CODIGO_LIBRO_TEXT.setFont(new java.awt.Font("Gotham", 0, 16)); // NOI18N
-        CODIGO_LIBRO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         CODIGO_LIBRO_TEXT.setText("Codigo del Libro / ISBN");
         jPanel1.add(CODIGO_LIBRO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 225, 30));
 
         EDITORIAL_TEXT.setBackground(new java.awt.Color(0, 0, 0));
         EDITORIAL_TEXT.setFont(new java.awt.Font("Gotham", 0, 16)); // NOI18N
-        EDITORIAL_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         EDITORIAL_TEXT.setText("Editorial");
         jPanel1.add(EDITORIAL_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 225, 30));
 
         FECHA_TEXT.setBackground(new java.awt.Color(0, 0, 0));
         FECHA_TEXT.setFont(new java.awt.Font("Gotham", 0, 16)); // NOI18N
-        FECHA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         FECHA_TEXT.setText("Fecha");
         jPanel1.add(FECHA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 400, 225, 30));
 
@@ -130,6 +123,9 @@ public class REGISTROLIBROS extends javax.swing.JFrame {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        getAccessibleContext().setAccessibleName("Registro de Libros de la Biblioteca #LaMetro");
+        getAccessibleContext().setAccessibleDescription("Registro de Libros de la Biblioteca de la Universidad Politecnica Metropolitana de Puebla");
 
         pack();
         setLocationRelativeTo(null);

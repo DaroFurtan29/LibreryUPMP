@@ -126,13 +126,11 @@ public class Visitas extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TEXT_VISITA.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
-        TEXT_VISITA.setForeground(new java.awt.Color(0, 0, 0));
         TEXT_VISITA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TEXT_VISITA.setText("Visitas");
         jPanel1.add(TEXT_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, -1));
 
         TEXT_TOTAL.setFont(new java.awt.Font("Gotham", 1, 18)); // NOI18N
-        TEXT_TOTAL.setForeground(new java.awt.Color(0, 0, 0));
         TEXT_TOTAL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TEXT_TOTAL.setText("Total de Visitas");
         jPanel1.add(TEXT_TOTAL, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 60, 150, -1));
@@ -168,7 +166,7 @@ public class Visitas extends javax.swing.JPanel {
                 ACTUALIZARActionPerformed(evt);
             }
         });
-        jPanel1.add(ACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 150, -1));
+        jPanel1.add(ACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         REGISTRAR.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
         REGISTRAR.setText("REGISTRAR");
@@ -180,12 +178,11 @@ public class Visitas extends javax.swing.JPanel {
         jPanel1.add(REGISTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 150, -1));
 
         jLabel1.setFont(new java.awt.Font("Gotham", 0, 13)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("<html><center>Inserte la Matricula o<p>Numero del Control<p>para registar<html>");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 180, 150, -1));
 
-        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
+        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         MATRICULA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 240, 150, -1));
 

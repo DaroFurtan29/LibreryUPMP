@@ -43,47 +43,41 @@ public class Registro_Docente extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Gotham", 3, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("REGISTRO DE DOCENTES/ADMINISTRATIVOS");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 60));
 
         jLabel1.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("<html><center>Estimado Docente/Personal Administrativo<p>Si vienes por primera vez a la Biblioteca de #LaMetro, haga primero su registro<html>");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 980, -1));
 
         NOMBRE_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        NOMBRE_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         NOMBRE_TEXT.setText("Nombre");
         jPanel1.add(NOMBRE_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, -1, 30));
 
-        NOMBRE.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        NOMBRE.setFont(new java.awt.Font("Gotham", 0, 23)); // NOI18N
         jPanel1.add(NOMBRE, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 160, 320, -1));
 
         MATRICULA_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        MATRICULA_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         MATRICULA_TEXT.setText("Numero de Control");
         jPanel1.add(MATRICULA_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, 30));
 
-        NUMERODOCENTE.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        NUMERODOCENTE.setFont(new java.awt.Font("Gotham", 0, 23)); // NOI18N
         jPanel1.add(NUMERODOCENTE, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 220, 320, -1));
 
         CORREO_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        CORREO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         CORREO_TEXT.setText("<html>Correo<p>Institucional<hmtl>");
         jPanel1.add(CORREO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, 60));
 
-        CORREO.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        CORREO.setFont(new java.awt.Font("Gotham", 0, 23)); // NOI18N
         jPanel1.add(CORREO, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 290, 320, 30));
 
         GENERO_TEXT.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
-        GENERO_TEXT.setForeground(new java.awt.Color(0, 0, 0));
         GENERO_TEXT.setText("Genero");
         jPanel1.add(GENERO_TEXT, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, 30));
 
-        GENERO.setFont(new java.awt.Font("Gotham", 0, 25)); // NOI18N
+        GENERO.setFont(new java.awt.Font("Gotham", 0, 23)); // NOI18N
         jPanel1.add(GENERO, new org.netbeans.lib.awtextra.AbsoluteConstraints(325, 350, 320, -1));
 
         REGISTRAR_BOTON.setBackground(new java.awt.Color(0, 32, 96));

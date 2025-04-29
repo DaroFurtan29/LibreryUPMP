@@ -144,7 +144,8 @@ public class MaestroRegistro extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1250, 650));
 
-        getAccessibleContext().setAccessibleDescription("Registrar la visita, prestamo de libros o uso de computadoras de la Biblioteca");
+        getAccessibleContext().setAccessibleName("Programa de Administracion Bibliotecaria #LaMetro");
+        getAccessibleContext().setAccessibleDescription("Programa que registrar la visita, prestamo de libros y/o uso de computadoras de la Biblioteca de la Universidad Politecnica Metropolitana de Puebla");
 
         pack();
         setLocationRelativeTo(null);

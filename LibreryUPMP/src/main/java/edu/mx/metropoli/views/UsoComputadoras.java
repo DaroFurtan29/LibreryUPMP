@@ -91,7 +91,6 @@ public class UsoComputadoras extends javax.swing.JPanel {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TEXT_VISITA.setFont(new java.awt.Font("Gotham", 1, 24)); // NOI18N
-        TEXT_VISITA.setForeground(new java.awt.Color(0, 0, 0));
         TEXT_VISITA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         TEXT_VISITA.setText("Uso de Computadoras");
         jPanel1.add(TEXT_VISITA, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1070, -1));
@@ -115,7 +114,7 @@ public class UsoComputadoras extends javax.swing.JPanel {
                 ACTUALIZARActionPerformed(evt);
             }
         });
-        jPanel1.add(ACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 150, -1));
+        jPanel1.add(ACTUALIZAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         REGISTRAR.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
         REGISTRAR.setText("REGISTRAR");
@@ -127,20 +126,18 @@ public class UsoComputadoras extends javax.swing.JPanel {
         jPanel1.add(REGISTRAR, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 125, 150, -1));
 
         matricula_text.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
-        matricula_text.setForeground(new java.awt.Color(0, 0, 0));
         matricula_text.setText("Matricula o Num de Control");
         jPanel1.add(matricula_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, -1, -1));
 
-        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
+        MATRICULA.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         MATRICULA.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel1.add(MATRICULA, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 175, 150, -1));
 
         computadora_text.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
-        computadora_text.setForeground(new java.awt.Color(0, 0, 0));
         computadora_text.setText("Computadora");
         jPanel1.add(computadora_text, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
-        COMPUTADORAS.setFont(new java.awt.Font("Gotham", 0, 12)); // NOI18N
+        COMPUTADORAS.setFont(new java.awt.Font("Gotham", 0, 14)); // NOI18N
         COMPUTADORAS.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "1", "2", "3", "4", "6", "7" }));
         jPanel1.add(COMPUTADORAS, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 225, 150, -1));
 
